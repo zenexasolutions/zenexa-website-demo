@@ -1,0 +1,108 @@
+.section {
+    background: var(--bg-dark-charcoal);
+    padding: 80px 0;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.card {
+    background: var(--bg-card-glass);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid var(--border-glass);
+    backdrop-filter: blur(12px);
+}
+
+.cardTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.list {
+    list-style: none;
+    display: grid;
+    gap: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+.icon {
+    color: var(--color-neon-teal);
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.certGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 80px;
+}
+
+.certItem {
+    background: var(--bg-card-glass);
+    padding: 24px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid var(--border-glass);
+    transition: all 300ms ease;
+}
+
+.certItem:hover {
+    border-color: var(--color-neon-teal);
+    background: var(--bg-card-hover);
+}
+
+.certLogo {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    border: 1px solid var(--border-glass);
+}
+
+.certName {
+    font-weight: 600;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .certGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

@@ -1,0 +1,57 @@
+.section {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-dark-charcoal);
+}
+
+.section.dark {
+    background: var(--bg-dark-charcoal);
+}
+
+.section.light {
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--border-glass);
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.section.white {
+    background: var(--bg-dark-charcoal);
+    /* Override white to dark */
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Background Grid Effect */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        padding: 0 80px;
+    }
+}

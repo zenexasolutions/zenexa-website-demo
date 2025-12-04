@@ -1,0 +1,70 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.iconWrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-glass);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: var(--color-neon-teal);
+    transition: all 400ms ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .iconWrapper {
+    transform: scale(1.1);
+    background: rgba(77, 184, 168, 0.1);
+    border-color: var(--color-neon-teal);
+    box-shadow: 0 0 20px rgba(77, 184, 168, 0.2);
+    color: white;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.cta {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-neon-teal);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 200ms ease;
+}
+
+.card:hover .cta {
+    gap: 10px;
+    text-shadow: 0 0 10px rgba(77, 184, 168, 0.4);
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
