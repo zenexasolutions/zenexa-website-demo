@@ -102,6 +102,40 @@
     font-size: 13px;
 }
 
+.contactLink {
+    color: var(--text-secondary);
+    transition: all 200ms ease;
+}
+
+.contactLink:hover {
+    color: var(--color-neon-teal);
+    text-shadow: 0 0 10px rgba(77, 184, 168, 0.4);
+}
+
+.subheading {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.officesList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.officeItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
 @media (min-width: 768px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);

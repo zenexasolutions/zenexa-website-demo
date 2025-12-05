@@ -28,7 +28,7 @@ export default function TermsPage() {
 
             <h2>6. Contact Us</h2>
             <p>In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at:</p>
-            <p>Zenexa<br />Bangalore, India<br />hello@zenexainfotech.com</p>
+            <p>Zenexa<br />Global Offices: India (Gujarat) | USA (Houston) | Canada (Waterloo)<br />info@zenexainfotech.com | +1 832 735 7799</p>
         </LegalContent>
     );
 }

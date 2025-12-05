@@ -22,8 +22,8 @@ export const Footer = () => {
                             />
                         </Link>
                         <p className={styles.tagline}>
-                            Based in India | Serving USA Healthcare<br />
-                            Maximizing revenue with expert BPO services.
+                            Global Healthcare BPO Solutions<br />
+                            Maximizing revenue with expert RCM services.
                         </p>
                         <div className={styles.social}>
                             <a href="#" className={styles.socialIcon} aria-label="LinkedIn"><Linkedin size={24} /></a>
@@ -72,16 +72,29 @@ export const Footer = () => {
                         <h3 className={styles.heading}>Get In Touch</h3>
                         <div className={styles.contactItem}>
                             <Phone size={18} />
-                            <span>+1-555-0123-4567</span>
+                            <a href="tel:+18327357799" className={styles.contactLink}>+1 832 735 7799</a>
                         </div>
                         <div className={styles.contactItem}>
                             <Mail size={18} />
-                            <span>hello@zenexainfotech.com</span>
+                            <a href="mailto:info@zenexainfotech.com" className={styles.contactLink}>info@zenexainfotech.com</a>
                         </div>
-                        <div className={styles.contactItem}>
-                            <MapPin size={18} />
-                            <span>Bangalore, India</span>
+
+                        <h4 className={styles.subheading}>Global Offices</h4>
+                        <div className={styles.officesList}>
+                            <div className={styles.officeItem}>
+                                <MapPin size={14} />
+                                <span>🇮🇳 India (Gujarat)</span>
+                            </div>
+                            <div className={styles.officeItem}>
+                                <MapPin size={14} />
+                                <span>🇺🇸 USA (Houston)</span>
+                            </div>
+                            <div className={styles.officeItem}>
+                                <MapPin size={14} />
+                                <span>🇨🇦 Canada (Waterloo)</span>
+                            </div>
                         </div>
+
                         <div style={{ marginTop: '20px' }}>
                             <Button variant="secondary" size="sm">Schedule Demo</Button>
                         </div>
