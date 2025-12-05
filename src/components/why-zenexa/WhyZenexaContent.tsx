@@ -21,7 +21,9 @@ export const WhyZenexaContent = () => {
                         </ul>
                     </div>
                     <div className={styles.visual}>
-                        <img src="https://images.unsplash.com/photo-1576091160550-2187d80a5873?auto=format&fit=crop&q=80&w=1000" alt="Quality Assurance" className={styles.image} />
+                        <div className={styles.imagePlaceholder}>
+                            <span>Quality Assurance Image</span>
+                        </div>
                     </div>
                 </div>
 
@@ -39,7 +41,9 @@ export const WhyZenexaContent = () => {
                         </ul>
                     </div>
                     <div className={styles.visual}>
-                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1000" alt="Security" className={styles.image} />
+                        <div className={styles.imagePlaceholder}>
+                            <span>Security Image</span>
+                        </div>
                     </div>
                 </div>
 
@@ -57,7 +61,9 @@ export const WhyZenexaContent = () => {
                         </ul>
                     </div>
                     <div className={styles.visual}>
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" alt="Scalability" className={styles.image} />
+                        <div className={styles.imagePlaceholder}>
+                            <span>Scalability Image</span>
+                        </div>
                     </div>
                 </div>
             </div>

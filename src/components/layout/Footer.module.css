@@ -28,6 +28,11 @@
     display: block;
 }
 
+.logoImage {
+    height: auto;
+    width: 140px;
+}
+
 .tagline {
     color: var(--text-muted);
     margin-bottom: 24px;

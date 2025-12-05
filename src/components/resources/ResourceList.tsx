@@ -10,42 +10,42 @@ const resources = [
         excerpt: "A comprehensive guide to the latest ICD-10 coding changes effective October 1, 2024. Ensure your practice is prepared.",
         category: "Guide",
         date: "October 15, 2024",
-        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1000"
+        imagePlaceholder: "ICD-10 Updates Image"
     },
     {
         title: "Reducing Claim Denials: Top 5 Strategies",
         excerpt: "Learn the most effective strategies to minimize claim denials and improve your first-pass acceptance rate.",
         category: "Whitepaper",
         date: "September 28, 2024",
-        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000"
+        imagePlaceholder: "Claim Denials Image"
     },
     {
         title: "The Impact of AI on Revenue Cycle Management",
         excerpt: "Explore how Artificial Intelligence and Machine Learning are revolutionizing healthcare RCM and billing processes.",
         category: "Article",
         date: "September 10, 2024",
-        image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=1000"
+        imagePlaceholder: "AI in RCM Image"
     },
     {
         title: "Outsourcing vs. In-House RCM: A Cost-Benefit Analysis",
         excerpt: "A detailed comparison of the costs and benefits of outsourcing your revenue cycle management versus keeping it in-house.",
         category: "Case Study",
         date: "August 22, 2024",
-        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1000"
+        imagePlaceholder: "Outsourcing Analysis Image"
     },
     {
         title: "HIPAA Compliance in 2025: Best Practices",
         excerpt: "Stay compliant with the latest HIPAA regulations and protect your patient data with these essential best practices.",
         category: "Guide",
         date: "August 05, 2024",
-        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1000"
+        imagePlaceholder: "HIPAA Compliance Image"
     },
     {
         title: "Improving Patient Collections in a High-Deductible Era",
         excerpt: "Tips and techniques for improving patient collections and financial counseling in an era of high-deductible health plans.",
         category: "Article",
         date: "July 18, 2024",
-        image: "https://images.unsplash.com/photo-1579684385136-137af7549022?auto=format&fit=crop&q=80&w=1000"
+        imagePlaceholder: "Patient Collections Image"
     }
 ];
 
@@ -56,7 +56,9 @@ export const ResourceList = () => {
                 {resources.map((res, index) => (
                     <div key={index} className={styles.card}>
                         <div className={styles.imageWrapper}>
-                            <img src={res.image} alt={res.title} className={styles.image} />
+                            <div className={styles.imagePlaceholder}>
+                                <span>{res.imagePlaceholder}</span>
+                            </div>
                             <span className={styles.category}>{res.category}</span>
                         </div>
                         <div className={styles.content}>

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Header.module.css';
 import { Button } from '@/components/ui/Button';
 import { Menu, Search, Calendar } from 'lucide-react';
@@ -22,7 +23,14 @@ export const Header = () => {
         <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={styles.container}>
                 <Link href="/" className={styles.logo}>
-                    Zenexa
+                    <Image 
+                        src="/horizontal stack logo.svg" 
+                        alt="Zenexa Logo" 
+                        width={160} 
+                        height={40}
+                        priority
+                        className={styles.logoImage}
+                    />
                 </Link>
 
                 <nav className={styles.nav}>
@@ -33,6 +41,7 @@ export const Header = () => {
                         <li><Link href="/resources" className={styles.link}>Resources</Link></li>
                         <li><Link href="/about" className={styles.link}>About</Link></li>
                         <li><Link href="/contact" className={styles.link}>Contact</Link></li>
+                        <li><a href="https://careers.zenexainfotech.com" className={styles.link} target="_blank" rel="noopener noreferrer">Careers</a></li>
                     </ul>
                 </nav>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
@@ -12,7 +13,13 @@ export const Footer = () => {
                     {/* Column 1: Company Info */}
                     <div>
                         <Link href="/" className={styles.logo}>
-                            Zenexa
+                            <Image
+                                src="/vertical stack logo.svg"
+                                alt="Zenexa Logo"
+                                width={140}
+                                height={100}
+                                className={styles.logoImage}
+                            />
                         </Link>
                         <p className={styles.tagline}>
                             Based in India | Serving USA Healthcare<br />
@@ -43,7 +50,7 @@ export const Footer = () => {
                         <ul className={styles.list}>
                             <li className={styles.item}><Link href="/about" className={styles.link}>About Us</Link></li>
                             <li className={styles.item}><Link href="/why-zenexa" className={styles.link}>Why Choose Zenexa</Link></li>
-                            <li className={styles.item}><Link href="/careers" className={styles.link}>Careers</Link></li>
+                            <li className={styles.item}><a href="https://careers.zenexainfotech.com" className={styles.link} target="_blank" rel="noopener noreferrer">Careers</a></li>
                             <li className={styles.item}><Link href="/blog" className={styles.link}>Blog & Resources</Link></li>
                             <li className={styles.item}><Link href="/contact" className={styles.link}>Contact Us</Link></li>
                         </ul>

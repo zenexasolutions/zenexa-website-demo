@@ -38,6 +38,11 @@
     letter-spacing: -0.5px;
 }
 
+.logoImage {
+    height: 40px;
+    width: auto;
+}
+
 .logo span {
     color: var(--color-neon-teal);
 }
