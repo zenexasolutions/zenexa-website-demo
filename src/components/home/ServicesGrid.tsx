@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './ServicesGrid.module.css';
 import { Section } from '@/components/ui/Section';
-import { Card } from '@/components/ui/Card';
 import { RefreshCw, FileText, CreditCard, Target, TrendingUp, Database, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -46,20 +45,20 @@ const services = [
 
 export const ServicesGrid = () => {
     return (
-        <Section variant="light">
-            <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                <h2 style={{ fontSize: '36px', fontWeight: 700, color: 'var(--color-primary-teal)', marginBottom: '16px' }}>
-                    Comprehensive Healthcare BPO Solutions
+        <section className={styles.section}>
+            <div className={styles.header}>
+                <h2 className={styles.headline}>
+                    Comprehensive Healthcare Solutions
                 </h2>
-                <p style={{ fontSize: '18px', color: 'var(--color-muted-gray)', maxWidth: '700px', margin: '0 auto' }}>
-                    Expert services across the entire revenue cycle, tailored to your organization's needs.
+                <p className={styles.subheadline}>
+                    Expert services across the entire revenue cycle, tailored to your organization&apos;s needs.
                 </p>
             </div>
 
             <div className={styles.grid}>
                 {services.map((service, index) => (
                     <Link href={service.link} key={index} className={styles.cardLink}>
-                        <Card className={styles.card}>
+                        <div className={styles.card}>
                             <div className={styles.iconWrapper}>
                                 {service.icon}
                             </div>
@@ -68,10 +67,10 @@ export const ServicesGrid = () => {
                             <div className={styles.cta}>
                                 Learn More <ArrowRight size={16} />
                             </div>
-                        </Card>
+                        </div>
                     </Link>
                 ))}
             </div>
-        </Section>
+        </section>
     );
 };

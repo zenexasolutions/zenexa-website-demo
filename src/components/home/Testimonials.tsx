@@ -44,7 +44,7 @@ export const Testimonials = () => {
                         <div key={i} className={styles.card}>
                             <Quote size={40} className={styles.quoteIcon} />
 
-                            <p className={styles.text}>"{t.text}"</p>
+                            <p className={styles.text}>&quot;{t.text}&quot;</p>
 
                             <div className={styles.footer}>
                                 <div className={styles.avatar}>

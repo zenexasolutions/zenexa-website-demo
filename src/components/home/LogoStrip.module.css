@@ -1,64 +1,104 @@
 .section {
-    padding: 40px 0;
-    background: var(--bg-dark-charcoal);
-    border-bottom: 1px solid var(--border-glass);
+    padding: 60px 0;
+    background: #050509;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     overflow: hidden;
+    position: relative;
+}
+
+.section::before,
+.section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.section::before {
+    left: 0;
+    background: linear-gradient(to right, #050509, transparent);
+}
+
+.section::after {
+    right: 0;
+    background: linear-gradient(to left, #050509, transparent);
 }
 
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2rem;
+    text-align: center;
 }
 
 .text {
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 14px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 24px;
     font-weight: 600;
+    opacity: 0.7;
 }
 
-.logoGrid {
+.scroller {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    flex-wrap: wrap;
-    opacity: 0.6;
+    overflow: hidden;
+    user-select: none;
+    gap: 4rem;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.scrollerInner {
+    display: flex;
+    flex-shrink: 0;
+    gap: 4rem;
+    min-width: 100%;
+    animation: scroll 40s linear infinite;
 }
 
 .logoItem {
-    font-size: 20px;
-    font-weight: 700;
-    color: white;
     display: flex;
     align-items: center;
-    gap: 10px;
-    filter: grayscale(100%);
-    transition: all 300ms ease;
+    gap: 12px;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
     cursor: default;
+    white-space: nowrap;
 }
 
 .logoItem:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-    color: var(--color-neon-teal);
-    text-shadow: 0 0 10px rgba(77, 184, 168, 0.4);
-}
-
-.icon {
-    color: var(--text-secondary);
+    color: white;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
 }
 
 .logoItem:hover .icon {
     color: var(--color-neon-teal);
+    filter: drop-shadow(0 0 8px var(--color-neon-teal));
+}
+
+.icon {
+    transition: all 0.3s ease;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 2rem));
+    }
 }
 
 @media (max-width: 768px) {
-    .logoGrid {
-        gap: 30px;
+    .scrollerInner {
+        gap: 2rem;
+    }
+
+    .logoItem {
+        font-size: 1rem;
     }
 }

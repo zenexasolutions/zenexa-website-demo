@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Stats.module.css';
-import { Section } from '@/components/ui/Section';
 
 const stats = [
     { number: "200+", label: "Clients Served", subtext: "US Healthcare Organizations" },
@@ -12,11 +11,11 @@ const stats = [
 export const Stats = () => {
     return (
         <section className={styles.section}>
-            <div className="container">
+            <div className={styles.container}>
                 <div className={styles.grid}>
                     {stats.map((stat, index) => (
                         <div key={index} className={styles.statBox}>
-                            <div className={styles.accentLine}></div>
+                            <div className={styles.orb}></div>
                             <div className={styles.number}>{stat.number}</div>
                             <div className={styles.label}>{stat.label}</div>
                             <div className={styles.subtext}>{stat.subtext}</div>
