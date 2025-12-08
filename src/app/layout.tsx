@@ -70,7 +70,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <a href="#main-content" className="skip-link">Skip to content</a>
         <Header />
-        <main id="main-content" style={{ minHeight: '100vh', paddingTop: '80px' }}>
+        <main id="main-content" style={{ minHeight: '100vh' }}>
           {children}
         </main>
         <Footer />
