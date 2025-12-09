@@ -43,17 +43,23 @@ const services = [
     }
 ];
 
-export const ServicesGrid = () => {
+interface ServicesGridProps {
+    hideHeader?: boolean;
+}
+
+export const ServicesGrid: React.FC<ServicesGridProps> = ({ hideHeader = false }) => {
     return (
         <section className={styles.section}>
-            <div className={styles.header}>
-                <h2 className={styles.headline}>
-                    Comprehensive Healthcare Solutions
-                </h2>
-                <p className={styles.subheadline}>
-                    Expert services across the entire revenue cycle, tailored to your organization&apos;s needs.
-                </p>
-            </div>
+            {!hideHeader && (
+                <div className={styles.header}>
+                    <h2 className={styles.headline}>
+                        Comprehensive Healthcare Solutions
+                    </h2>
+                    <p className={styles.subheadline}>
+                        Expert services across the entire revenue cycle, tailored to your organization&apos;s needs.
+                    </p>
+                </div>
+            )}
 
             <div className={styles.grid}>
                 {services.map((service, index) => (

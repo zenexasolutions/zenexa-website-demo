@@ -17,7 +17,7 @@ export default function ServicesPage() {
                 subheadline="Expert services across the entire revenue cycle, from patient pre-registration to final payment posting"
                 tagline="Trusted by 200+ US healthcare organizations"
             />
-            <ServicesGrid />
+            <ServicesGrid hideHeader={true} />
             <WhyOutsource />
             <CTA />
         </>
