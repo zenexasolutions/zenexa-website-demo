@@ -1,75 +1,60 @@
 import React from 'react';
 import styles from './ResourceList.module.css';
 import { Section } from '@/components/ui/Section';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, BookOpen, FileText, Newspaper, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
+import { resources, Resource, getCategoryColor } from '@/data/resourcesData';
 
-const resources = [
-    {
-        title: "2025 ICD-10 Coding Updates: What You Need to Know",
-        excerpt: "A comprehensive guide to the latest ICD-10 coding changes effective October 1, 2024. Ensure your practice is prepared.",
-        category: "Guide",
-        date: "October 15, 2024",
-        imagePlaceholder: "ICD-10 Updates Image"
-    },
-    {
-        title: "Reducing Claim Denials: Top 5 Strategies",
-        excerpt: "Learn the most effective strategies to minimize claim denials and improve your first-pass acceptance rate.",
-        category: "Whitepaper",
-        date: "September 28, 2024",
-        imagePlaceholder: "Claim Denials Image"
-    },
-    {
-        title: "The Impact of AI on Revenue Cycle Management",
-        excerpt: "Explore how Artificial Intelligence and Machine Learning are revolutionizing healthcare RCM and billing processes.",
-        category: "Article",
-        date: "September 10, 2024",
-        imagePlaceholder: "AI in RCM Image"
-    },
-    {
-        title: "Outsourcing vs. In-House RCM: A Cost-Benefit Analysis",
-        excerpt: "A detailed comparison of the costs and benefits of outsourcing your revenue cycle management versus keeping it in-house.",
-        category: "Case Study",
-        date: "August 22, 2024",
-        imagePlaceholder: "Outsourcing Analysis Image"
-    },
-    {
-        title: "HIPAA Compliance in 2025: Best Practices",
-        excerpt: "Stay compliant with the latest HIPAA regulations and protect your patient data with these essential best practices.",
-        category: "Guide",
-        date: "August 05, 2024",
-        imagePlaceholder: "HIPAA Compliance Image"
-    },
-    {
-        title: "Improving Patient Collections in a High-Deductible Era",
-        excerpt: "Tips and techniques for improving patient collections and financial counseling in an era of high-deductible health plans.",
-        category: "Article",
-        date: "July 18, 2024",
-        imagePlaceholder: "Patient Collections Image"
+const CategoryIcon = ({ category }: { category: Resource['category'] }) => {
+    const props = { size: 14 };
+    switch (category) {
+        case 'Guide': return <BookOpen {...props} />;
+        case 'Whitepaper': return <FileText {...props} />;
+        case 'Article': return <Newspaper {...props} />;
+        case 'Case Study': return <BarChart3 {...props} />;
     }
-];
+};
 
 export const ResourceList = () => {
     return (
         <Section>
             <div className={styles.grid}>
                 {resources.map((res, index) => (
-                    <div key={index} className={styles.card}>
+                    <Link
+                        key={index}
+                        href={`/resources/${res.slug}`}
+                        className={styles.card}
+                    >
                         <div className={styles.imageWrapper}>
                             <div className={styles.imagePlaceholder}>
-                                <span>{res.imagePlaceholder}</span>
+                                <div
+                                    className={styles.placeholderIcon}
+                                    style={{ color: getCategoryColor(res.category) }}
+                                >
+                                    <CategoryIcon category={res.category} />
+                                </div>
+                                <span className={styles.placeholderText}>{res.title}</span>
                             </div>
-                            <span className={styles.category}>{res.category}</span>
+                            <span
+                                className={styles.category}
+                                style={{
+                                    color: getCategoryColor(res.category),
+                                    borderColor: getCategoryColor(res.category)
+                                }}
+                            >
+                                <CategoryIcon category={res.category} />
+                                {res.category}
+                            </span>
                         </div>
                         <div className={styles.content}>
                             <span className={styles.date}>{res.date}</span>
                             <h3 className={styles.title}>{res.title}</h3>
                             <p className={styles.excerpt}>{res.excerpt}</p>
-                            <Link href="#" className={styles.link}>
+                            <span className={styles.link}>
                                 Read More <ArrowRight size={16} />
-                            </Link>
+                            </span>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </Section>
