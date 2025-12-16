@@ -11,15 +11,14 @@
     height: 600px;
     border-radius: 24px;
     overflow: hidden;
-    border: 1px solid var(--border-glass);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-light);
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
 }
 
 .image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.9;
 }
 
 .content {
@@ -31,7 +30,7 @@
 .title {
     font-size: 42px;
     font-weight: 800;
-    color: white;
+    color: var(--text-primary);
     letter-spacing: -1px;
 }
 
@@ -49,23 +48,25 @@
 }
 
 .statItem {
-    background: var(--bg-card-glass);
+    background: var(--bg-card-solid);
     padding: 24px;
     border-radius: 16px;
     text-align: center;
-    border: 1px solid var(--border-glass);
+    border: 1px solid var(--border-light);
     transition: all 300ms ease;
+    box-shadow: var(--shadow-sm);
 }
 
 .statItem:hover {
-    border-color: var(--color-neon-teal);
-    background: var(--bg-card-hover);
+    border-color: rgba(24, 79, 93, 0.2);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
 }
 
 .statNumber {
     font-size: 36px;
     font-weight: 800;
-    color: var(--color-neon-teal);
+    color: var(--color-primary-teal);
     display: block;
     margin-bottom: 4px;
 }

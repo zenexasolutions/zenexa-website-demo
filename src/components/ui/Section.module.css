@@ -2,22 +2,21 @@
     padding: 100px 0;
     position: relative;
     overflow: hidden;
-    background: var(--bg-dark-charcoal);
+    background: var(--bg-light-primary);
 }
 
 .section.dark {
-    background: var(--bg-dark-charcoal);
+    background: var(--bg-light-secondary);
 }
 
 .section.light {
-    background: var(--bg-elevated);
-    border-top: 1px solid var(--border-glass);
-    border-bottom: 1px solid var(--border-glass);
+    background: var(--bg-light-primary);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
 }
 
 .section.white {
-    background: var(--bg-dark-charcoal);
-    /* Override white to dark */
+    background: var(--bg-light-primary);
 }
 
 .container {
@@ -28,7 +27,7 @@
     z-index: 2;
 }
 
-/* Background Grid Effect */
+/* Subtle Background Grid Effect */
 .section::before {
     content: '';
     position: absolute;
@@ -37,8 +36,8 @@
     right: 0;
     bottom: 0;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        linear-gradient(rgba(15, 23, 42, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
     background-size: 50px 50px;
     opacity: 0.5;
     pointer-events: none;

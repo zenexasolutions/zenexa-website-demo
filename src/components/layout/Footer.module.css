@@ -1,10 +1,10 @@
 .footer {
-    background: #020204;
-    color: var(--text-secondary);
+    background: #0f172a;
+    color: #e2e8f0;
     padding-top: 100px;
     padding-bottom: 40px;
     font-size: 14px;
-    border-top: 1px solid var(--border-glass);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .container {
@@ -31,10 +31,11 @@
 .logoImage {
     height: auto;
     width: 140px;
+    filter: brightness(0) invert(1);
 }
 
 .tagline {
-    color: var(--text-muted);
+    color: #94a3b8;
     margin-bottom: 24px;
     line-height: 1.6;
     max-width: 300px;
@@ -46,14 +47,14 @@
 }
 
 .socialIcon {
-    color: var(--text-secondary);
+    color: #94a3b8;
     transition: all 200ms ease;
 }
 
 .socialIcon:hover {
-    color: var(--color-neon-teal);
+    color: #4db8a8;
     transform: scale(1.1);
-    filter: drop-shadow(0 0 5px var(--color-neon-teal));
+    filter: drop-shadow(0 0 5px rgba(77, 184, 168, 0.5));
 }
 
 .heading {
@@ -74,12 +75,12 @@
 }
 
 .link {
-    color: var(--text-secondary);
+    color: #94a3b8;
     transition: all 200ms ease;
 }
 
 .link:hover {
-    color: var(--color-neon-teal);
+    color: #4db8a8;
     padding-left: 6px;
 }
 
@@ -88,27 +89,27 @@
     align-items: center;
     gap: 12px;
     margin-bottom: 20px;
-    color: var(--text-secondary);
+    color: #94a3b8;
 }
 
 .bottomBar {
-    border-top: 1px solid var(--border-glass);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    color: var(--text-muted);
+    color: #64748b;
     font-size: 13px;
 }
 
 .contactLink {
-    color: var(--text-secondary);
+    color: #94a3b8;
     transition: all 200ms ease;
 }
 
 .contactLink:hover {
-    color: var(--color-neon-teal);
+    color: #4db8a8;
     text-shadow: 0 0 10px rgba(77, 184, 168, 0.4);
 }
 
@@ -117,7 +118,7 @@
     font-weight: 600;
     margin-top: 16px;
     margin-bottom: 12px;
-    color: var(--text-muted);
+    color: #64748b;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -133,7 +134,7 @@
     align-items: center;
     gap: 8px;
     font-size: 13px;
-    color: var(--text-secondary);
+    color: #94a3b8;
 }
 
 @media (min-width: 768px) {

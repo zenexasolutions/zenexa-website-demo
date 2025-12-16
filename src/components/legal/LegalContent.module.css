@@ -7,7 +7,7 @@
 .title {
     font-size: 42px;
     font-weight: 800;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 60px;
     letter-spacing: -1px;
 }
@@ -21,7 +21,7 @@
 .content h2 {
     font-size: 24px;
     font-weight: 700;
-    color: white;
+    color: var(--text-primary);
     margin-top: 48px;
     margin-bottom: 20px;
 }
@@ -41,5 +41,5 @@
 }
 
 .content strong {
-    color: white;
+    color: var(--text-primary);
 }

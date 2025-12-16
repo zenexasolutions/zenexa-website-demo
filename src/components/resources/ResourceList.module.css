@@ -6,11 +6,11 @@
 }
 
 .card {
-    background: var(--bg-card-glass);
+    background: var(--bg-card-solid);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
-    border: 1px solid var(--border-glass);
+    border: 1px solid var(--border-light);
     transition: all 400ms ease;
     display: flex;
     flex-direction: column;
@@ -18,9 +18,8 @@
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    border-color: var(--color-neon-teal);
-    background: var(--bg-card-hover);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(24, 79, 93, 0.2);
 }
 
 .imageWrapper {
@@ -34,12 +33,10 @@
     height: 100%;
     object-fit: cover;
     transition: transform 600ms ease;
-    opacity: 0.8;
 }
 
 .card:hover .image {
     transform: scale(1.05);
-    opacity: 1;
 }
 
 .imagePlaceholder {
@@ -49,7 +46,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-dark-charcoal) 100%);
+    background: linear-gradient(135deg, var(--bg-light-secondary) 0%, var(--bg-light-tertiary) 100%);
     color: var(--text-muted);
     font-size: 13px;
     font-weight: 500;
@@ -62,11 +59,11 @@
     width: 48px;
     height: 48px;
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(15, 23, 42, 0.03);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px dashed var(--border-glass);
+    border: 1px dashed var(--border-light);
 }
 
 .placeholderIcon svg {
@@ -85,7 +82,7 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    background: rgba(5, 5, 9, 0.85);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(8px);
     padding: 6px 14px;
     border-radius: 20px;
@@ -97,6 +94,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
+    box-shadow: var(--shadow-sm);
 }
 
 .content {
@@ -115,7 +113,7 @@
 .title {
     font-size: 20px;
     font-weight: 700;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 16px;
     line-height: 1.4;
 }
@@ -131,7 +129,7 @@
 .link {
     font-size: 14px;
     font-weight: 600;
-    color: var(--color-neon-teal);
+    color: var(--color-primary-teal);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -140,6 +138,7 @@
 
 .card:hover .link {
     gap: 12px;
+    color: var(--color-secondary-teal);
 }
 
 @media (min-width: 768px) {

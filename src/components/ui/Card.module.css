@@ -1,8 +1,6 @@
 .card {
-    background: var(--bg-card-glass);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--border-glass);
+    background: var(--bg-card-solid);
+    border: 1px solid var(--border-light);
     border-radius: 20px;
     padding: 40px;
     box-shadow: var(--shadow-sm);
@@ -16,20 +14,19 @@
 
 .card:hover {
     transform: translateY(-8px);
-    background: var(--bg-card-hover);
-    border-color: var(--color-secondary-teal);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(52, 137, 120, 0.2);
+    box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.1);
+    border-color: rgba(24, 79, 93, 0.2);
 }
 
-/* Neon glow line on top */
+/* Accent line on top */
 .card::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--color-neon-teal), transparent);
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-secondary-teal), transparent);
     opacity: 0;
     transition: opacity 400ms ease;
 }
@@ -46,7 +43,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at top right, rgba(77, 184, 168, 0.05), transparent 60%);
-    opacity: 0.5;
+    background: radial-gradient(circle at top right, rgba(24, 79, 93, 0.02), transparent 60%);
     pointer-events: none;
 }

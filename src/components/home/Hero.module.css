@@ -6,10 +6,10 @@
     justify-content: center;
     overflow: hidden;
     padding-top: var(--header-height);
-    background: radial-gradient(circle at 50% 0%, #1a2c38 0%, #050509 60%);
+    background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 60%, #f8fafc 100%);
 }
 
-/* Animated Background Elements */
+/* Subtle Pattern Background */
 .hero::before {
     content: '';
     position: absolute;
@@ -18,49 +18,49 @@
     right: 0;
     bottom: 0;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 50px 50px;
-    mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 80%);
+        linear-gradient(rgba(24, 79, 93, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(24, 79, 93, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
     pointer-events: none;
     z-index: 1;
 }
 
+/* Decorative blobs */
 .glow {
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.4;
+    filter: blur(100px);
+    opacity: 0.5;
     z-index: 0;
     animation: pulseGlow 8s infinite alternate;
 }
 
 .glow1 {
-    top: -10%;
-    left: 20%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, var(--color-primary-teal) 0%, transparent 70%);
+    top: -15%;
+    left: 10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(13, 148, 136, 0.15) 0%, transparent 70%);
     animation-delay: 0s;
 }
 
 .glow2 {
-    bottom: 10%;
-    right: 10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, var(--color-secondary-teal) 0%, transparent 70%);
+    bottom: 0%;
+    right: 5%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(52, 137, 120, 0.12) 0%, transparent 70%);
     animation-delay: -4s;
 }
 
 .glow3 {
-    top: 40%;
-    left: 50%;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, var(--color-neon-blue) 0%, transparent 70%);
+    top: 50%;
+    left: 60%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(8, 145, 178, 0.08) 0%, transparent 70%);
     transform: translate(-50%, -50%);
-    opacity: 0.2;
     animation: pulseGlow 6s infinite alternate-reverse;
 }
 
@@ -87,8 +87,8 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    background: rgba(24, 79, 93, 0.3);
-    border: 1px solid rgba(77, 184, 168, 0.3);
+    background: linear-gradient(135deg, rgba(24, 79, 93, 0.08) 0%, rgba(52, 137, 120, 0.08) 100%);
+    border: 1px solid rgba(24, 79, 93, 0.15);
     border-radius: 100px;
     margin-bottom: 1.5rem;
     backdrop-filter: blur(4px);
@@ -97,7 +97,7 @@
 .badgeText {
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--color-neon-teal);
+    color: var(--color-primary-teal);
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
@@ -108,11 +108,11 @@
     font-weight: 800;
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
-    color: #fff;
+    color: var(--text-primary);
 }
 
 .highlight {
-    background: linear-gradient(135deg, #fff 0%, #4db8a8 50%, #00f0ff 100%);
+    background: linear-gradient(135deg, var(--color-primary-teal) 0%, var(--color-secondary-teal) 50%, #0891b2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -137,7 +137,7 @@
 .trustBadges {
     display: flex;
     gap: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
     padding-top: 2rem;
 }
 
@@ -150,7 +150,7 @@
     font-weight: 500;
 }
 
-/* Visual Side - 3D Perspective */
+/* Visual Side - Image Focused with Cards */
 .visual {
     position: relative;
     height: 600px;
@@ -165,23 +165,20 @@
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transform: rotateY(-12deg) rotateX(5deg);
+    transform: rotateY(-8deg) rotateX(3deg);
     transition: transform 0.3s ease-out;
     animation: floatMain 6s ease-in-out infinite;
 }
 
-/* Glass Cards */
+/* Glass Cards - Light Mode */
 .glassCard {
-    background: rgba(20, 25, 30, 0.7);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(15, 23, 42, 0.08);
     box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(255, 255, 255, 0.05),
-        inset 0 0 20px rgba(255, 255, 255, 0.05);
+        0 20px 40px rgba(15, 23, 42, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
     border-radius: 24px;
 }
 
@@ -204,7 +201,7 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 16px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .windowControls {
@@ -225,31 +222,31 @@
 }
 
 .statCard {
-    background: rgba(255, 255, 255, 0.03);
+    background: linear-gradient(135deg, rgba(248, 250, 252, 0.8) 0%, rgba(241, 245, 249, 0.6) 100%);
     border-radius: 16px;
     padding: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .statLabel {
     font-size: 0.75rem;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     margin-bottom: 4px;
 }
 
 .statValue {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-primary);
 }
 
 .chartContainer {
     flex: 1;
-    background: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(180deg, rgba(248, 250, 252, 0.5) 0%, rgba(255, 255, 255, 0.3) 100%);
     border-radius: 16px;
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 /* Floating Elements */
@@ -269,9 +266,9 @@
     right: -5%;
     transform: translateZ(40px);
     animation: float 5s ease-in-out infinite;
-    background: rgba(16, 185, 129, 0.1);
+    background: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(16, 185, 129, 0.2);
-    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.12);
 }
 
 .float2 {
@@ -279,9 +276,9 @@
     left: -10%;
     transform: translateZ(60px);
     animation: float 7s ease-in-out infinite reverse;
-    background: rgba(245, 158, 11, 0.1);
+    background: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(245, 158, 11, 0.2);
-    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.12);
 }
 
 .float3 {
@@ -289,9 +286,9 @@
     left: 10%;
     transform: translateZ(20px);
     animation: float 6s ease-in-out infinite 1s;
-    background: rgba(0, 240, 255, 0.1);
-    border: 1px solid rgba(0, 240, 255, 0.2);
-    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(8, 145, 178, 0.2);
+    box-shadow: 0 10px 30px rgba(8, 145, 178, 0.12);
 }
 
 /* Animations */
@@ -299,11 +296,11 @@
 
     0%,
     100% {
-        transform: rotateY(-12deg) rotateX(5deg) translateY(0);
+        transform: rotateY(-8deg) rotateX(3deg) translateY(0);
     }
 
     50% {
-        transform: rotateY(-12deg) rotateX(5deg) translateY(-20px);
+        transform: rotateY(-8deg) rotateX(3deg) translateY(-20px);
     }
 }
 
@@ -321,12 +318,12 @@
 
 @keyframes pulseGlow {
     0% {
-        opacity: 0.3;
+        opacity: 0.4;
         transform: scale(1);
     }
 
     100% {
-        opacity: 0.6;
+        opacity: 0.7;
         transform: scale(1.1);
     }
 }
@@ -378,7 +375,6 @@
 
     .floatCard {
         display: none;
-        /* Hide floating cards on smaller screens to avoid clutter */
     }
 }
 
@@ -394,6 +390,5 @@
 
     .visual {
         display: none;
-        /* Hide complex 3D visual on mobile */
     }
 }

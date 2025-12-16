@@ -6,11 +6,11 @@
 }
 
 .card {
-    background: var(--bg-card-glass);
+    background: var(--bg-card-solid);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
-    border: 1px solid var(--border-glass);
+    border: 1px solid var(--border-light);
     transition: all 400ms ease;
     display: flex;
     flex-direction: column;
@@ -18,9 +18,8 @@
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    border-color: var(--color-neon-teal);
-    background: var(--bg-card-hover);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(24, 79, 93, 0.2);
 }
 
 .imageWrapper {
@@ -34,12 +33,10 @@
     height: 100%;
     object-fit: cover;
     transition: transform 600ms ease;
-    opacity: 0.8;
 }
 
 .card:hover .image {
     transform: scale(1.05);
-    opacity: 1;
 }
 
 .imagePlaceholder {
@@ -48,8 +45,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-dark-charcoal) 100%);
-    border: 2px dashed var(--border-glass);
+    background: linear-gradient(135deg, var(--bg-light-secondary) 0%, var(--bg-light-tertiary) 100%);
+    border: 2px dashed var(--border-light);
     color: var(--text-muted);
     font-size: 14px;
     font-weight: 500;
@@ -67,24 +64,24 @@
 .iconWrapper {
     width: 56px;
     height: 56px;
-    background: var(--bg-elevated);
+    background: var(--bg-light-primary);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-neon-teal);
+    color: var(--color-primary-teal);
     margin-bottom: 20px;
     margin-top: -60px;
     position: relative;
     z-index: 1;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    border: 1px solid var(--border-glass);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-light);
 }
 
 .title {
     font-size: 22px;
     font-weight: 700;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 12px;
 }
 
@@ -98,10 +95,10 @@
 .stats {
     margin-top: auto;
     padding-top: 20px;
-    border-top: 1px solid var(--border-glass);
+    border-top: 1px solid var(--border-light);
     font-size: 14px;
     font-weight: 600;
-    color: var(--color-neon-teal);
+    color: var(--color-primary-teal);
     display: flex;
     align-items: center;
     gap: 8px;

@@ -1,6 +1,6 @@
 .section {
     padding: 120px 0;
-    background: #050509;
+    background: var(--bg-light-secondary);
     position: relative;
     overflow: hidden;
 }
@@ -15,9 +15,9 @@
 .headline {
     font-size: 3.5rem;
     font-weight: 800;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -42,14 +42,14 @@
 }
 
 .card {
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--bg-card-solid);
+    border: 1px solid var(--border-light);
     border-radius: 24px;
     padding: 40px 32px;
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
-    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
 }
 
 .card::before {
@@ -59,16 +59,16 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, transparent, var(--color-neon-teal), transparent);
+    background: linear-gradient(90deg, transparent, var(--color-secondary-teal), transparent);
     transform: scaleX(0);
     transition: transform 0.4s ease;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    border-color: rgba(255, 255, 255, 0.1);
+    background: var(--bg-card-solid);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    border-color: rgba(24, 79, 93, 0.15);
 }
 
 .card:hover::before {
@@ -78,21 +78,20 @@
 .iconContainer {
     width: 64px;
     height: 64px;
-    background: rgba(255, 255, 255, 0.05);
+    background: linear-gradient(135deg, rgba(24, 79, 93, 0.08) 0%, rgba(52, 137, 120, 0.08) 100%);
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 24px;
-    color: var(--color-neon-teal);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+    color: var(--color-primary-teal);
+    border: 1px solid rgba(24, 79, 93, 0.1);
 }
 
 .title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 24px;
     display: flex;
     align-items: center;
@@ -118,7 +117,7 @@
 }
 
 .item:hover {
-    color: white;
+    color: var(--text-primary);
 }
 
 .checkIcon {
@@ -141,7 +140,7 @@
     transform: translate(-50%, -50%);
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(24, 79, 93, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(24, 79, 93, 0.03) 0%, transparent 70%);
     z-index: 0;
     pointer-events: none;
 }

@@ -1,11 +1,11 @@
 .section {
     padding: 100px 0;
-    background: #050509;
+    background: linear-gradient(180deg, var(--bg-light-primary) 0%, var(--bg-light-secondary) 100%);
     position: relative;
     overflow: hidden;
 }
 
-/* Background Pulse Effect */
+/* Background Subtle Effect */
 .section::before {
     content: '';
     position: absolute;
@@ -14,7 +14,7 @@
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(77, 184, 168, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(24, 79, 93, 0.03) 0%, transparent 70%);
     z-index: 0;
 }
 
@@ -34,8 +34,8 @@
 
 .statBox {
     position: relative;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--bg-card-solid);
+    border: 1px solid var(--border-light);
     border-radius: 24px;
     padding: 32px 24px;
     text-align: center;
@@ -45,13 +45,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: var(--shadow-sm);
 }
 
 .statBox:hover {
     transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(77, 184, 168, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: var(--bg-card-solid);
+    border-color: rgba(24, 79, 93, 0.2);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
 }
 
 .statBox::after {
@@ -60,11 +61,17 @@
     inset: -1px;
     border-radius: 24px;
     padding: 1px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent);
+    background: linear-gradient(180deg, rgba(24, 79, 93, 0.15), transparent);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.statBox:hover::after {
+    opacity: 1;
 }
 
 /* Glowing Orb Behind Number */
@@ -75,7 +82,7 @@
     transform: translate(-50%, -50%);
     width: 120px;
     height: 120px;
-    background: radial-gradient(circle, rgba(77, 184, 168, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(24, 79, 93, 0.08) 0%, transparent 70%);
     border-radius: 50%;
     filter: blur(20px);
     opacity: 0;
@@ -90,9 +97,9 @@
 .number {
     font-size: 3.5rem;
     font-weight: 800;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 8px;
-    background: linear-gradient(135deg, #fff 0%, #4db8a8 100%);
+    background: linear-gradient(135deg, #184f5d 0%, #348978 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -103,7 +110,7 @@
 .label {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--color-neon-teal);
+    color: var(--color-primary-teal);
     margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 0.05em;

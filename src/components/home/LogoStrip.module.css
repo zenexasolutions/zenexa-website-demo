@@ -1,7 +1,7 @@
 .section {
     padding: 60px 0;
-    background: #050509;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--bg-light-secondary);
+    border-bottom: 1px solid var(--border-light);
     overflow: hidden;
     position: relative;
 }
@@ -19,12 +19,12 @@
 
 .section::before {
     left: 0;
-    background: linear-gradient(to right, #050509, transparent);
+    background: linear-gradient(to right, var(--bg-light-secondary), transparent);
 }
 
 .section::after {
     right: 0;
-    background: linear-gradient(to left, #050509, transparent);
+    background: linear-gradient(to left, var(--bg-light-secondary), transparent);
 }
 
 .container {
@@ -36,12 +36,11 @@
 
 .text {
     font-size: 0.875rem;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     margin-bottom: 40px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-weight: 600;
-    opacity: 0.7;
 }
 
 .scroller {
@@ -73,14 +72,12 @@
 }
 
 .logoItem:hover {
-    color: white;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    color: var(--color-primary-teal);
     transform: scale(1.05);
 }
 
 .logoItem:hover .icon {
-    color: var(--color-neon-teal);
-    filter: drop-shadow(0 0 8px var(--color-neon-teal));
+    color: var(--color-secondary-teal);
 }
 
 .icon {

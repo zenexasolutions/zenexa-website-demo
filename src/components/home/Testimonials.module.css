@@ -1,8 +1,7 @@
 .section {
     position: relative;
     padding: 120px 0;
-    background: #050509;
-    /* Match Hero bg base */
+    background: var(--bg-light-primary);
     overflow: hidden;
 }
 
@@ -15,8 +14,8 @@
     right: 0;
     bottom: 0;
     background-image:
-        radial-gradient(circle at 15% 50%, rgba(24, 79, 93, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 85% 30%, rgba(52, 137, 120, 0.15) 0%, transparent 50%);
+        radial-gradient(circle at 15% 50%, rgba(24, 79, 93, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(52, 137, 120, 0.05) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -24,7 +23,7 @@
     position: absolute;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(77, 184, 168, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(24, 79, 93, 0.04) 0%, transparent 70%);
     border-radius: 50%;
     filter: blur(80px);
     z-index: 0;
@@ -39,7 +38,7 @@
 .glow2 {
     bottom: -20%;
     right: -10%;
-    background: radial-gradient(circle, rgba(0, 240, 255, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(52, 137, 120, 0.03) 0%, transparent 70%);
     animation-delay: -5s;
 }
 
@@ -60,12 +59,12 @@
 .badge {
     display: inline-block;
     padding: 8px 16px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(24, 79, 93, 0.08) 0%, rgba(52, 137, 120, 0.08) 100%);
+    border: 1px solid rgba(24, 79, 93, 0.15);
     border-radius: 50px;
     font-size: 14px;
     font-weight: 600;
-    color: var(--color-neon-teal);
+    color: var(--color-primary-teal);
     margin-bottom: 24px;
     backdrop-filter: blur(4px);
 }
@@ -73,10 +72,10 @@
 .headline {
     font-size: 3.5rem;
     font-weight: 800;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 24px;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, #fff 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -98,16 +97,15 @@
 
 .card {
     position: relative;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--bg-card-solid);
     border-radius: 24px;
     padding: 48px 32px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-light);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-shadow: var(--shadow-sm);
 }
 
 .card::before {
@@ -116,23 +114,29 @@
     inset: 0;
     border-radius: 24px;
     padding: 1px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent);
+    background: linear-gradient(180deg, rgba(24, 79, 93, 0.1), transparent);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .card:hover {
     transform: translateY(-10px) scale(1.02);
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--bg-card-solid);
     box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(77, 184, 168, 0.3);
+        0 20px 40px rgba(15, 23, 42, 0.08),
+        0 0 0 1px rgba(24, 79, 93, 0.15);
+}
+
+.card:hover::before {
+    opacity: 1;
 }
 
 .card:hover .quoteIcon {
-    color: var(--color-neon-teal);
+    color: var(--color-primary-teal);
     opacity: 1;
     transform: scale(1.1);
 }
@@ -140,14 +144,14 @@
 .quoteIcon {
     margin-bottom: 32px;
     color: var(--text-muted);
-    opacity: 0.5;
+    opacity: 0.4;
     transition: all 0.3s ease;
 }
 
 .text {
     font-size: 1.125rem;
     line-height: 1.7;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     margin-bottom: 40px;
     flex-grow: 1;
     font-weight: 400;
@@ -157,7 +161,7 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--border-light);
     padding-top: 24px;
 }
 
@@ -172,7 +176,7 @@
     font-weight: 700;
     color: white;
     font-size: 18px;
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(15, 23, 42, 0.05);
 }
 
 .authorInfo {
@@ -183,7 +187,7 @@
 .name {
     font-size: 1rem;
     font-weight: 700;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 2px;
 }
 

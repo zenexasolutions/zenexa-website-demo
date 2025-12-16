@@ -1,12 +1,12 @@
 .section {
-    background: var(--bg-dark-charcoal);
+    background: var(--bg-light-primary);
     padding: 100px 0;
 }
 
 .headline {
     font-size: 42px;
     font-weight: 800;
-    color: white;
+    color: var(--text-primary);
     text-align: center;
     margin-bottom: 16px;
     letter-spacing: -0.5px;
@@ -32,18 +32,18 @@
     gap: 24px;
     padding: 40px;
     border-radius: 24px;
-    border: 1px solid var(--border-glass);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
 }
 
 .challenge {
-    background: rgba(239, 68, 68, 0.05);
-    border-color: rgba(239, 68, 68, 0.1);
+    background: linear-gradient(135deg, rgba(254, 242, 242, 0.8) 0%, rgba(254, 226, 226, 0.5) 100%);
+    border-color: rgba(239, 68, 68, 0.15);
 }
 
 .solution {
-    background: rgba(16, 185, 129, 0.05);
+    background: linear-gradient(135deg, rgba(236, 253, 245, 0.9) 0%, rgba(209, 250, 229, 0.6) 100%);
     border-color: rgba(16, 185, 129, 0.2);
-    box-shadow: 0 0 40px rgba(16, 185, 129, 0.05);
 }
 
 .columnTitle {
@@ -55,12 +55,12 @@
 }
 
 .challenge .columnTitle {
-    color: #fca5a5;
+    color: #dc2626;
     border-color: rgba(239, 68, 68, 0.2);
 }
 
 .solution .columnTitle {
-    color: #6ee7b7;
+    color: #059669;
     border-color: rgba(16, 185, 129, 0.2);
 }
 
@@ -78,11 +78,11 @@
 }
 
 .challenge .icon {
-    color: #ef4444;
+    color: #dc2626;
 }
 
 .solution .icon {
-    color: #10b981;
+    color: #059669;
 }
 
 .benefitsGrid {
@@ -92,37 +92,38 @@
 }
 
 .benefitCard {
-    background: var(--bg-card-glass);
+    background: var(--bg-card-solid);
     padding: 32px;
     border-radius: 20px;
-    border: 1px solid var(--border-glass);
+    border: 1px solid var(--border-light);
     text-align: center;
     transition: all 300ms ease;
+    box-shadow: var(--shadow-sm);
 }
 
 .benefitCard:hover {
     transform: translateY(-5px);
-    border-color: var(--color-neon-teal);
-    background: var(--bg-card-hover);
+    border-color: rgba(24, 79, 93, 0.2);
+    box-shadow: var(--shadow-md);
 }
 
 .benefitIcon {
     width: 64px;
     height: 64px;
-    background: rgba(77, 184, 168, 0.1);
+    background: linear-gradient(135deg, rgba(24, 79, 93, 0.08) 0%, rgba(52, 137, 120, 0.08) 100%);
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 24px;
-    color: var(--color-neon-teal);
-    border: 1px solid rgba(77, 184, 168, 0.2);
+    color: var(--color-primary-teal);
+    border: 1px solid rgba(24, 79, 93, 0.1);
 }
 
 .benefitTitle {
     font-size: 20px;
     font-weight: 700;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 12px;
 }
 

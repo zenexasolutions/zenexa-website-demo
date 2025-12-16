@@ -1,6 +1,6 @@
 .section {
     padding: 120px 0;
-    background: #050509;
+    background: var(--bg-light-primary);
     position: relative;
     overflow: hidden;
 }
@@ -23,10 +23,11 @@
     transition: all 0.5s ease;
 }
 
-/* Problem Side (Chaos) */
+/* Problem Side */
 .problem {
-    background: rgba(239, 68, 68, 0.03);
-    border: 1px solid rgba(239, 68, 68, 0.1);
+    background: linear-gradient(135deg, rgba(254, 242, 242, 0.8) 0%, rgba(254, 226, 226, 0.5) 100%);
+    border: 1px solid rgba(239, 68, 68, 0.15);
+    box-shadow: 0 4px 20px rgba(239, 68, 68, 0.06);
 }
 
 .problem::before {
@@ -36,7 +37,7 @@
     left: 0;
     right: 0;
     height: 100%;
-    background: radial-gradient(circle at 0% 0%, rgba(239, 68, 68, 0.1), transparent 60%);
+    background: radial-gradient(circle at 0% 0%, rgba(239, 68, 68, 0.08), transparent 60%);
     pointer-events: none;
     border-radius: 32px;
 }
@@ -44,7 +45,7 @@
 .problemTitle {
     font-size: 2.5rem;
     font-weight: 800;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
@@ -52,14 +53,14 @@
 }
 
 .problemTitle span {
-    color: #ef4444;
+    color: #dc2626;
 }
 
-/* Solution Side (Order) */
+/* Solution Side */
 .solution {
-    background: rgba(16, 185, 129, 0.03);
-    border: 1px solid rgba(16, 185, 129, 0.1);
-    box-shadow: 0 0 40px rgba(16, 185, 129, 0.05);
+    background: linear-gradient(135deg, rgba(236, 253, 245, 0.9) 0%, rgba(209, 250, 229, 0.6) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.08);
 }
 
 .solution::before {
@@ -69,7 +70,7 @@
     left: 0;
     right: 0;
     height: 100%;
-    background: radial-gradient(circle at 100% 0%, rgba(16, 185, 129, 0.1), transparent 60%);
+    background: radial-gradient(circle at 100% 0%, rgba(16, 185, 129, 0.08), transparent 60%);
     pointer-events: none;
     border-radius: 32px;
 }
@@ -77,7 +78,7 @@
 .solutionTitle {
     font-size: 2.5rem;
     font-weight: 800;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
@@ -85,7 +86,7 @@
 }
 
 .solutionTitle span {
-    color: #10b981;
+    color: #059669;
 }
 
 /* List Items */
@@ -101,23 +102,24 @@
     gap: 1rem;
     padding: 1.5rem;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(15, 23, 42, 0.06);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
 
 .problem .item:hover {
-    background: rgba(239, 68, 68, 0.05);
+    background: rgba(255, 255, 255, 0.9);
     border-color: rgba(239, 68, 68, 0.2);
     transform: translateX(-5px);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.08);
 }
 
 .solution .item:hover {
-    background: rgba(16, 185, 129, 0.05);
-    border-color: rgba(16, 185, 129, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(16, 185, 129, 0.25);
     transform: translateX(5px) scale(1.02);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.1);
 }
 
 .iconWrapper {
@@ -131,12 +133,12 @@
 
 .problem .iconWrapper {
     background: rgba(239, 68, 68, 0.1);
-    color: #ef4444;
+    color: #dc2626;
 }
 
 .solution .iconWrapper {
     background: rgba(16, 185, 129, 0.1);
-    color: #10b981;
+    color: #059669;
 }
 
 .text {
@@ -146,7 +148,7 @@
 }
 
 .item:hover .text {
-    color: white;
+    color: var(--text-primary);
 }
 
 /* Responsive */

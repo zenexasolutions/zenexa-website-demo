@@ -6,10 +6,10 @@
 }
 
 .jobCard {
-    background: var(--bg-card-glass);
+    background: var(--bg-card-solid);
     padding: 32px;
     border-radius: 16px;
-    border: 1px solid var(--border-glass);
+    border: 1px solid var(--border-light);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,20 +17,18 @@
     gap: 24px;
     box-shadow: var(--shadow-sm);
     transition: all 300ms ease;
-    backdrop-filter: blur(12px);
 }
 
 .jobCard:hover {
-    border-color: var(--color-neon-teal);
-    background: var(--bg-card-hover);
+    border-color: rgba(24, 79, 93, 0.2);
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-md);
 }
 
 .jobTitle {
     font-size: 20px;
     font-weight: 700;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 12px;
 }
 
@@ -49,13 +47,13 @@
 }
 
 .metaIcon {
-    color: var(--color-neon-teal);
+    color: var(--color-primary-teal);
 }
 
 .sectionTitle {
     font-size: 32px;
     font-weight: 800;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 40px;
     text-align: center;
     letter-spacing: -0.5px;

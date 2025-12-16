@@ -15,7 +15,7 @@ export const Hero = () => {
                 {/* Left Content */}
                 <div className={styles.content}>
                     <div className={styles.badgeContainer}>
-                        <Zap size={16} className="text-emerald-400" />
+                        <Zap size={16} color="#0d9488" />
                         <span className={styles.badgeText}>Next-Gen Revenue Cycle Management</span>
                     </div>
 
@@ -40,15 +40,15 @@ export const Hero = () => {
 
                     <div className={styles.trustBadges}>
                         <div className={styles.trustItem}>
-                            <ShieldCheck size={20} className="text-emerald-400" />
+                            <ShieldCheck size={20} color="#0d9488" />
                             <span>HIPAA Compliant</span>
                         </div>
                         <div className={styles.trustItem}>
-                            <CheckCircle2 size={20} className="text-emerald-400" />
+                            <CheckCircle2 size={20} color="#0d9488" />
                             <span>99% Accuracy</span>
                         </div>
                         <div className={styles.trustItem}>
-                            <Users size={20} className="text-emerald-400" />
+                            <Users size={20} color="#0d9488" />
                             <span>24/7 Support</span>
                         </div>
                     </div>
@@ -61,8 +61,8 @@ export const Hero = () => {
                         <div className={`${styles.glassCard} ${styles.mainDashboard}`}>
                             <div className={styles.dashboardHeader}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                    <Activity size={20} className="text-emerald-400" />
-                                    <span style={{ fontWeight: 600, color: '#fff' }}>Live Revenue Monitor</span>
+                                    <Activity size={20} color="#0d9488" />
+                                    <span style={{ fontWeight: 600, color: '#0f172a' }}>Live Revenue Monitor</span>
                                 </div>
                                 <div className={styles.windowControls}>
                                     <div className={styles.controlDot} style={{ background: '#ef4444' }} />
@@ -82,58 +82,58 @@ export const Hero = () => {
                                 </div>
                                 <div className={styles.statCard}>
                                     <div className={styles.statLabel}>Cash Flow</div>
-                                    <div className={styles.statValue} style={{ color: '#00f0ff' }}>+18%</div>
+                                    <div className={styles.statValue} style={{ color: '#0891b2' }}>+18%</div>
                                 </div>
                             </div>
 
                             <div className={styles.chartContainer}>
-                                {/* Abstract Chart Visualization */}
+                                {/* Chart Visualization */}
                                 <svg width="100%" height="100%" viewBox="0 0 400 200" preserveAspectRatio="none">
                                     <defs>
                                         <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
-                                            <stop offset="0%" stopColor="#4db8a8" stopOpacity="0.3" />
-                                            <stop offset="100%" stopColor="#4db8a8" stopOpacity="0" />
+                                            <stop offset="0%" stopColor="#0d9488" stopOpacity="0.3" />
+                                            <stop offset="100%" stopColor="#0d9488" stopOpacity="0" />
                                         </linearGradient>
                                     </defs>
                                     <path d="M0,150 C50,140 100,160 150,100 S250,120 300,50 S350,80 400,20 V200 H0 Z" fill="url(#chartFill)" />
-                                    <path d="M0,150 C50,140 100,160 150,100 S250,120 300,50 S350,80 400,20" fill="none" stroke="#4db8a8" strokeWidth="3" strokeLinecap="round" />
+                                    <path d="M0,150 C50,140 100,160 150,100 S250,120 300,50 S350,80 400,20" fill="none" stroke="#0d9488" strokeWidth="3" strokeLinecap="round" />
 
                                     {/* Data Points */}
-                                    <circle cx="150" cy="100" r="4" fill="#fff" />
-                                    <circle cx="300" cy="50" r="4" fill="#fff" />
-                                    <circle cx="400" cy="20" r="4" fill="#fff" />
+                                    <circle cx="150" cy="100" r="4" fill="#184f5d" />
+                                    <circle cx="300" cy="50" r="4" fill="#184f5d" />
+                                    <circle cx="400" cy="20" r="4" fill="#184f5d" />
                                 </svg>
                             </div>
                         </div>
 
                         {/* Floating Stats Cards */}
                         <div className={`${styles.glassCard} ${styles.floatCard} ${styles.float1}`}>
-                            <div style={{ background: 'rgba(16, 185, 129, 0.2)', padding: '10px', borderRadius: '10px' }}>
+                            <div style={{ background: 'rgba(16, 185, 129, 0.1)', padding: '10px', borderRadius: '10px' }}>
                                 <DollarSign size={24} color="#10b981" />
                             </div>
                             <div>
-                                <div style={{ fontSize: '12px', color: '#94a3b8' }}>Revenue Recovered</div>
-                                <div style={{ fontSize: '18px', fontWeight: '700', color: 'white' }}>$4.2M</div>
+                                <div style={{ fontSize: '12px', color: '#64748b' }}>Revenue Recovered</div>
+                                <div style={{ fontSize: '18px', fontWeight: '700', color: '#0f172a' }}>$4.2M</div>
                             </div>
                         </div>
 
                         <div className={`${styles.glassCard} ${styles.floatCard} ${styles.float2}`}>
-                            <div style={{ background: 'rgba(245, 158, 11, 0.2)', padding: '10px', borderRadius: '10px' }}>
+                            <div style={{ background: 'rgba(245, 158, 11, 0.1)', padding: '10px', borderRadius: '10px' }}>
                                 <BarChart3 size={24} color="#f59e0b" />
                             </div>
                             <div>
-                                <div style={{ fontSize: '12px', color: '#94a3b8' }}>Denials Resolved</div>
-                                <div style={{ fontSize: '18px', fontWeight: '700', color: 'white' }}>1,240</div>
+                                <div style={{ fontSize: '12px', color: '#64748b' }}>Denials Resolved</div>
+                                <div style={{ fontSize: '18px', fontWeight: '700', color: '#0f172a' }}>1,240</div>
                             </div>
                         </div>
 
                         <div className={`${styles.glassCard} ${styles.floatCard} ${styles.float3}`}>
-                            <div style={{ background: 'rgba(0, 240, 255, 0.2)', padding: '10px', borderRadius: '10px' }}>
-                                <Zap size={24} color="#00f0ff" />
+                            <div style={{ background: 'rgba(8, 145, 178, 0.1)', padding: '10px', borderRadius: '10px' }}>
+                                <Zap size={24} color="#0891b2" />
                             </div>
                             <div>
-                                <div style={{ fontSize: '12px', color: '#94a3b8' }}>Efficiency Boost</div>
-                                <div style={{ fontSize: '18px', fontWeight: '700', color: 'white' }}>3x Faster</div>
+                                <div style={{ fontSize: '12px', color: '#64748b' }}>Efficiency Boost</div>
+                                <div style={{ fontSize: '18px', fontWeight: '700', color: '#0f172a' }}>3x Faster</div>
                             </div>
                         </div>
                     </div>

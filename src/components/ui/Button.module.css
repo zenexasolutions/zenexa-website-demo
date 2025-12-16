@@ -4,7 +4,6 @@
     justify-content: center;
     padding: 14px 32px;
     border-radius: 50px;
-    /* Pill shape */
     font-weight: 600;
     font-size: 15px;
     letter-spacing: 0.5px;
@@ -19,37 +18,33 @@
 
 /* Primary Variant */
 .primary {
-    background: var(--color-primary-teal);
+    background: linear-gradient(135deg, var(--color-primary-teal) 0%, var(--color-secondary-teal) 100%);
     color: white;
-    box-shadow: 0 4px 15px rgba(24, 79, 93, 0.4);
+    box-shadow: 0 4px 15px rgba(24, 79, 93, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .primary:hover {
-    box-shadow: 0 0 25px rgba(77, 184, 168, 0.4);
-    transform: scale(1.02) translateY(-1px);
-    border-color: var(--color-neon-teal);
-    background: var(--color-secondary-teal);
+    box-shadow: 0 8px 25px rgba(24, 79, 93, 0.4);
+    transform: scale(1.02) translateY(-2px);
 }
 
 .primary:active {
     transform: scale(0.98);
 }
 
-/* Secondary Variant */
+/* Secondary Variant - Light Mode */
 .secondary {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-glass);
-    color: var(--color-neon-teal);
-    backdrop-filter: blur(10px);
+    background: transparent;
+    border: 2px solid var(--color-primary-teal);
+    color: var(--color-primary-teal);
 }
 
 .secondary:hover {
-    background: rgba(77, 184, 168, 0.1);
-    border-color: var(--color-neon-teal);
+    background: var(--color-primary-teal);
     color: white;
-    box-shadow: 0 0 15px rgba(77, 184, 168, 0.2);
-    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(24, 79, 93, 0.25);
+    transform: translateY(-2px);
 }
 
 /* Ghost Variant */
@@ -61,8 +56,8 @@
 }
 
 .ghost:hover {
-    color: var(--color-neon-teal);
-    background: rgba(255, 255, 255, 0.03);
+    color: var(--color-primary-teal);
+    background: rgba(24, 79, 93, 0.05);
 }
 
 /* Sizes */

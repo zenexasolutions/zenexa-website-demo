@@ -7,40 +7,38 @@
 }
 
 .card {
-    background: var(--bg-card-glass);
+    background: var(--bg-card-solid);
     padding: 40px;
     border-radius: 20px;
     box-shadow: var(--shadow-sm);
     text-align: center;
-    border: 1px solid var(--border-glass);
+    border: 1px solid var(--border-light);
     transition: all 300ms ease;
-    backdrop-filter: blur(12px);
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border-color: var(--color-neon-teal);
-    background: var(--bg-card-hover);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(24, 79, 93, 0.2);
 }
 
 .iconWrapper {
     width: 64px;
     height: 64px;
-    background: rgba(77, 184, 168, 0.1);
+    background: linear-gradient(135deg, rgba(24, 79, 93, 0.08) 0%, rgba(52, 137, 120, 0.08) 100%);
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 24px;
-    color: var(--color-neon-teal);
-    border: 1px solid rgba(77, 184, 168, 0.2);
+    color: var(--color-primary-teal);
+    border: 1px solid rgba(24, 79, 93, 0.1);
 }
 
 .title {
     font-size: 20px;
     font-weight: 700;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 12px;
 }
 
@@ -51,16 +49,16 @@
 }
 
 .link {
-    color: var(--color-neon-teal);
+    color: var(--color-primary-teal);
     font-weight: 600;
     margin-top: 12px;
     display: inline-block;
     font-size: 16px;
+    transition: all 200ms ease;
 }
 
 .link:hover {
-    text-decoration: underline;
-    text-shadow: 0 0 10px rgba(77, 184, 168, 0.4);
+    color: var(--color-secondary-teal);
 }
 
 .officesList {
