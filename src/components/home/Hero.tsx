@@ -2,51 +2,78 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './Hero.module.css';
 import { Button } from '@/components/ui/Button';
-import { Zap } from 'lucide-react';
+import { Zap, Phone, Users, Activity, FileCheck, DollarSign } from 'lucide-react';
 
 export const Hero = () => {
     return (
         <section className={styles.hero}>
-            {/* Ambient Background Effects */}
-            <div className={`${styles.glow} ${styles.glow1}`} />
-            <div className={`${styles.glow} ${styles.glow2}`} />
-            <div className={`${styles.glow} ${styles.glow3}`} />
+            {/* Background Decorative Elements */}
+            <div className={styles.circles}>
+                <div className={styles.circle1} />
+                <div className={styles.circle2} />
+                <div className={styles.circle3} />
+            </div>
 
-            <div className={styles.container}>
-                {/* Left Content */}
-                <div className={styles.content}>
-                    <div className={styles.badgeContainer}>
-                        <Zap size={16} color="#0d9488" />
-                        <span className={styles.badgeText}>Powering the Pulse of Modern Healthcare</span>
+            <div className={styles.mainWrapper}>
+                <div className={styles.container}>
+                    {/* Left Content Side */}
+                    <div className={styles.content}>
+                        <h1 className={styles.headline}>
+                            Powering growth with <br />
+                            <span className={styles.highlight}>Intelligence and Skill.</span>
+                        </h1>
+                        <p className={styles.subheadline}>
+                            We are leading healthcare RCM partners across the States dedicated to
+                            providing exceptional revenue performance for all providers.
+                        </p>
+
+                        <div className={styles.actions}>
+                            <Button size="lg">Get Started</Button>
+                            <button className={styles.callButton}>
+                                <div className={styles.callIcon}><Phone size={20} /></div>
+                                <span>Schedule Strategy Call</span>
+                            </button>
+                        </div>
+
+                        {/* Stats Row */}
+                        <div className={styles.statsRow}>
+                            <div className={styles.statBox}>
+                                <div className={styles.statIcon}><Users size={20} /></div>
+                                <div className={styles.statText}>
+                                    <strong>500+</strong>
+                                    <span>Specialized Staff</span>
+                                </div>
+                            </div>
+                            <div className={styles.statBox}>
+                                <div className={styles.statIcon}><Activity size={20} /></div>
+                                <div className={styles.statText}>
+                                    <strong>98%</strong>
+                                    <span>First-Pass Rate</span>
+                                </div>
+                            </div>
+                            <div className={styles.statBox}>
+                                <div className={styles.statIcon}><FileCheck size={20} /></div>
+                                <div className={styles.statText}>
+                                    <strong>1M+</strong>
+                                    <span>Claims Analyzed</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <h1 className={styles.headline}>
-                        Revenue Resilience for the <br />
-                        <span className={styles.highlight}>Modern Healthcare Enterprise</span>
-                    </h1>
-
-                    <p className={styles.subheadline}>
-                        Where Compliance Meets Performance. Zenexa transforms your healthcare revenue cycle
-                        into a high-performance engine with AI-enhanced solutions backed by certified HIM professionals.
-                    </p>
-
-                    <div className={styles.actions}>
-                        <Button size="lg">
-                            Start Free Consultation
-                        </Button>
-                    </div>
-                </div>
-
-                {/* Right Visual - Healthcare Image */}
-                <div className={styles.visual}>
-                    <div className={styles.imageContainer}>
-                        <Image
-                            src="/hero-healthcare.png"
-                            alt="Healthcare Revenue Cycle Management Team"
-                            fill
-                            style={{ objectFit: 'cover' }}
-                            priority
-                        />
+                    {/* Right Visual Side */}
+                    <div className={styles.visual}>
+                        <div className={styles.slantedBackground} />
+                        <div className={styles.imageOverlay}>
+                            <Image
+                                src="/images/healthcare-team.png"
+                                alt="Zenexa Expert Team"
+                                width={800}
+                                height={800}
+                                className={styles.heroImage}
+                                priority
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
