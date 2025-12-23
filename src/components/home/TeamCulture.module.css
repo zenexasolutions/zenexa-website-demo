@@ -1,0 +1,168 @@
+.section {
+    padding: 8rem 0;
+    background: linear-gradient(180deg, var(--bg-page) 0%, var(--bg-subtle) 100%);
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.splitSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 8rem;
+}
+
+.textColumn {
+    max-width: 600px;
+}
+
+.subHeading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+    font-family: var(--font-outfit);
+}
+
+.featureBlock {
+    margin-bottom: 2.5rem;
+}
+
+.featureTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary-teal);
+    margin-bottom: 0.75rem;
+    font-family: var(--font-outfit);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.featureTitle::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 4px;
+    background: var(--color-secondary-teal);
+    border-radius: 2px;
+}
+
+.featureText {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 1.125rem;
+}
+
+.imageColumn {
+    position: relative;
+    height: 400px;
+}
+
+.cultureCard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 400px;
+    padding: 3rem;
+    border-radius: 24px;
+    background: white;
+    box-shadow: var(--shadow-xl);
+}
+
+.statRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.statItem {
+    text-align: center;
+}
+
+.statValue {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary-teal);
+    font-family: var(--font-outfit);
+}
+
+.statLabel {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Values Section */
+.valuesSection {
+    text-align: center;
+}
+
+.centeredHeading {
+    margin-bottom: 4rem;
+    font-family: var(--font-outfit);
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.valueCard {
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(24, 79, 93, 0.05);
+}
+
+.valueCard:hover {
+    transform: translateY(-8px);
+    border-color: rgba(24, 79, 93, 0.2);
+}
+
+.valueCard h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-family: var(--font-outfit);
+}
+
+.valueCard p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .valuesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .splitSection {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .imageColumn {
+        height: 300px;
+    }
+
+    .valuesGrid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}

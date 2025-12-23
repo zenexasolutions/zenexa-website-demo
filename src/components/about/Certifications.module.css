@@ -1,0 +1,53 @@
+.section {
+    padding: 6rem 0;
+    background: var(--bg-subtle);
+    border-top: 1px solid var(--slate-200);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    background: white;
+    border: 1px solid rgba(24, 79, 93, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.iconWrapper {
+    width: 64px;
+    height: 64px;
+    background: rgba(26, 79, 93, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: var(--transition-smooth);
+}
+
+.card:hover .iconWrapper {
+    transform: scale(1.1) rotate(5deg);
+    background: rgba(26, 79, 93, 0.1);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-family: var(--font-outfit), sans-serif;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}

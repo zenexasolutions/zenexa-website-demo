@@ -1,0 +1,275 @@
+.page {
+    background: var(--bg-page);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: var(--header-height);
+    padding-bottom: 4rem;
+    background: radial-gradient(circle at 50% 30%, rgba(24, 79, 93, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(52, 137, 120, 0.04) 0%, transparent 50%),
+        linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%);
+    overflow: hidden;
+}
+
+.heroLead {
+    font-size: 1.35rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Mission Section */
+.missionSection {
+    padding: 6rem 0;
+    background: white;
+}
+
+.missionGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.missionContent h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-family: var(--font-outfit);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.missionContent p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.missionContent p:last-of-type {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.visionCard {
+    background: linear-gradient(135deg, var(--color-primary-teal) 0%, #0f3d47 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.visionCard::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.visionCard h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    font-family: var(--font-outfit);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.visionCard p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+/* Story Section */
+.storySection {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.storyHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.storyBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(24, 79, 93, 0.08);
+    border-radius: 100px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary-teal);
+    margin-bottom: 1.5rem;
+}
+
+.timelineContainer {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timelineContainer::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--color-primary-teal) 0%, rgba(24, 79, 93, 0.1) 100%);
+}
+
+.timelineItem {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+}
+
+.timelineItem:last-child {
+    margin-bottom: 0;
+}
+
+.timelineDot {
+    position: absolute;
+    left: -2.5rem;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    background: var(--color-primary-teal);
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 2px 8px rgba(24, 79, 93, 0.2);
+}
+
+.timelineItem h4 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-family: var(--font-outfit);
+    margin-bottom: 0.75rem;
+}
+
+.timelineItem p {
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Values Section */
+.valuesSection {
+    padding: 6rem 0;
+    background: var(--bg-subtle);
+}
+
+.valuesHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.valuesHeader h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-family: var(--font-outfit);
+    margin-bottom: 1rem;
+}
+
+.valuesHeader p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.valueCard {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(24, 79, 93, 0.08);
+    transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(24, 79, 93, 0.1);
+    border-color: rgba(24, 79, 93, 0.2);
+}
+
+.valueCard h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-primary-teal);
+    font-family: var(--font-outfit);
+    margin-bottom: 1rem;
+}
+
+.valueCard p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .missionGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .valuesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding-top: calc(var(--header-height) + 2rem);
+        padding-bottom: 3rem;
+    }
+
+    .heroLead {
+        font-size: 1.125rem;
+    }
+
+    .missionSection,
+    .valuesSection {
+        padding: 4rem 0;
+    }
+
+    .missionContent h2 {
+        font-size: 1.75rem;
+    }
+
+    .valuesGrid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .timelineContainer {
+        padding-left: 2.5rem;
+    }
+}

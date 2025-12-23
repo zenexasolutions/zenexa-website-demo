@@ -1,45 +1,44 @@
 import React from 'react';
 import styles from './ServicesGrid.module.css';
-import { Section } from '@/components/ui/Section';
-import { RefreshCw, FileText, CreditCard, Target, TrendingUp, Database, ArrowRight } from 'lucide-react';
+import { FileSearch, Pill, Target, FileText, ArrowRight, Zap, Shield, Activity, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
 
 const services = [
     {
-        icon: <RefreshCw size={32} />,
-        title: "Revenue Cycle Management",
-        description: "End-to-end RCM from pre-registration to final payment posting. Reduce DSO by 40-50% and achieve 95%+ clean claim rates.",
-        link: "/services/rcm"
+        icon: <FileSearch size={32} />,
+        title: "Provider Outreach & Medical Record Retrieval",
+        subtitle: "Retrieval at the Speed of Decision",
+        description: "Smart-Chase technology cuts turnaround times by 40%. Direct EHR integration with Epic, Cerner, and Athena.",
+        link: "/services/provider-outreach",
+        accent: "#14b8a6",
+        features: ["Direct EHR Integration", "Predictive Algorithms", "Clinical QA Layer"]
     },
     {
-        icon: <FileText size={32} />,
-        title: "Medical Coding",
-        description: "AAPC/AHIMA certified coders delivering 99%+ accuracy across ICD-10, CPT, and HCPCS codes. Specialty-specific expertise.",
-        link: "/services/coding"
-    },
-    {
-        icon: <CreditCard size={32} />,
-        title: "Claims Processing",
-        description: "Real-time eligibility verification, pre-auth management, and automated claim submission. Achieve 90%+ first-pass approval rates.",
-        link: "/services/claims"
+        icon: <Pill size={32} />,
+        title: "Pharmacy Billing & Revenue Cycle",
+        subtitle: "Defending Pharmacy Margins",
+        description: "Specialized solutions for LTC and Home Infusion. We provide a fortress around your revenue in a volatile landscape.",
+        link: "/services/pharmacy-billing",
+        accent: "#0891b2",
+        features: ["DIR Fee Mitigation", "Inventory Cash Flow", "LTC Specialization"]
     },
     {
         icon: <Target size={32} />,
-        title: "HEDIS Gap Closure",
-        description: "Mobile gap closure programs and preventive screening coordination. Improve Star ratings and member outcomes.",
-        link: "/services/hedis"
+        title: "Chart Abstraction & Risk Adjustment (HCC)",
+        subtitle: "Accurate Coding for the V28 Era",
+        description: "High-acuity patient capture with clinical accuracy. Risk scores that stand up to RADV audits.",
+        link: "/services/risk-adjustment",
+        accent: "#184f5d",
+        features: ["V28 Model Fluency", "MEAT Validation", "HEDIS Integration"]
     },
     {
-        icon: <TrendingUp size={32} />,
-        title: "Denial Management",
-        description: "Aggressive denial follow-up with 70%+ successful appeal rates. Recover underpaid and denied claims efficiently.",
-        link: "/services/denial"
-    },
-    {
-        icon: <Database size={32} />,
-        title: "Data Management",
-        description: "Accurate medical record data entry, scanning, indexing, and chart management with 99%+ quality assurance.",
-        link: "/services/data"
+        icon: <FileText size={32} />,
+        title: "Claims Management & Coding Support",
+        subtitle: "Zero-Defect Revenue Cycle",
+        description: "Autonomous technology and expert auditing to raise Clean Claim Rates to 98%+. Stop revenue loss at the source.",
+        link: "/services/claims-management",
+        accent: "#348978",
+        features: ["Denial Prevention", "98%+ CCR", "Front-End Intelligence"]
     }
 ];
 
@@ -50,32 +49,57 @@ interface ServicesGridProps {
 export const ServicesGrid: React.FC<ServicesGridProps> = ({ hideHeader = false }) => {
     return (
         <section className={styles.section}>
-            {!hideHeader && (
-                <div className={styles.header}>
-                    <h2 className={styles.headline}>
-                        Comprehensive Healthcare Solutions
-                    </h2>
-                    <p className={styles.subheadline}>
-                        Expert services across the entire revenue cycle, tailored to your organization&apos;s needs.
-                    </p>
-                </div>
-            )}
+            <div className={styles.backgroundEffects}>
+                <div className={styles.blob1}></div>
+                <div className={styles.blob2}></div>
+            </div>
 
-            <div className={styles.grid}>
-                {services.map((service, index) => (
-                    <Link href={service.link} key={index} className={styles.cardLink}>
-                        <div className={styles.card}>
-                            <div className={styles.iconWrapper}>
-                                {service.icon}
+            <div className={styles.container}>
+                {!hideHeader && (
+                    <div className={styles.header}>
+                        <span className={styles.badge}>Our Core Expertise</span>
+                        <h2 className={styles.headline}>
+                            Powering the Pulse of <br />Modern Healthcare
+                        </h2>
+                        <p className={styles.subheadline}>
+                            Forensic accuracy meets scalable technology. We transform administrative complexity into financial resilience.
+                        </p>
+                    </div>
+                )}
+
+                <div className={styles.grid}>
+                    {services.map((service, index) => (
+                        <Link href={service.link} key={index} className={styles.cardLink}>
+                            <div className={styles.card} style={{ '--accent': service.accent } as React.CSSProperties}>
+                                <div className={styles.cardHeader}>
+                                    <div className={styles.iconWrapper}>
+                                        {service.icon}
+                                    </div>
+                                    <div className={styles.cardTitles}>
+                                        <h3 className={styles.title}>{service.title}</h3>
+                                        <span className={styles.cardSubtitle}>{service.subtitle}</span>
+                                    </div>
+                                </div>
+                                <p className={styles.description}>{service.description}</p>
+
+                                <div className={styles.featureList}>
+                                    {service.features.map((f, i) => (
+                                        <div key={i} className={styles.featureItem}>
+                                            <div className={styles.featureDot}></div>
+                                            <span>{f}</span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className={styles.footer}>
+                                    <span className={styles.cta}>
+                                        Explore Service <ArrowRight size={16} />
+                                    </span>
+                                </div>
                             </div>
-                            <h3 className={styles.title}>{service.title}</h3>
-                            <p className={styles.description}>{service.description}</p>
-                            <div className={styles.cta}>
-                                Learn More <ArrowRight size={16} />
-                            </div>
-                        </div>
-                    </Link>
-                ))}
+                        </Link>
+                    ))}
+                </div>
             </div>
         </section>
     );

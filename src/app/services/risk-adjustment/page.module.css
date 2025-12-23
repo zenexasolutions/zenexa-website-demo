@@ -1,0 +1,235 @@
+.page {
+    background: #fcfdfe;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 10rem 0 6rem;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 70% 20%, rgba(20, 184, 166, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 10% 80%, rgba(24, 79, 93, 0.03) 0%, transparent 50%);
+}
+
+.heroBadge {
+    display: inline-block;
+    background: rgba(20, 184, 166, 0.1);
+    color: var(--color-primary-teal);
+    padding: 0.6rem 1.2rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(20, 184, 166, 0.2);
+}
+
+.heroContent {
+    max-width: 850px;
+}
+
+.heroTitle {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    letter-spacing: -0.03em;
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+/* Section Styling */
+.section {
+    padding: 6rem 0;
+}
+
+/* Two Model Split */
+.modelGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.textSide {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.description {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.infoCard {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.infoCard.teal {
+    border-left: 6px solid var(--color-primary-teal);
+}
+
+.infoCard.slate {
+    border-left: 6px solid #64748b;
+}
+
+.iconBox {
+    width: 48px;
+    height: 48px;
+    background: #f0fdfa;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary-teal);
+    flex-shrink: 0;
+}
+
+.cardText h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.cardText p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.visualSide {
+    position: relative;
+}
+
+.imageWrapper {
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.imageContainer {
+    position: relative;
+    height: 500px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+/* MEAT Grid */
+.meatSection {
+    background: #ffffff;
+    border-radius: 48px;
+    padding: 6rem;
+    margin: 4rem 0;
+    box-shadow: 0 40px 120px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.meatTitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.meatSubtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 4rem;
+    font-size: 1.1rem;
+}
+
+.meatGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.meatCard {
+    background: #f8fafc;
+    padding: 2.5rem;
+    border-radius: 32px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+.meatCard:hover {
+    transform: translateY(-8px);
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    border-color: rgba(20, 184, 166, 0.3);
+}
+
+.letter {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--color-primary-teal);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Synergy Section */
+.synergyCard {
+    background: #0f172a;
+    border-radius: 56px;
+    padding: 6rem;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 6rem;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+
+    .modelGrid,
+    .meatGrid,
+    .synergyCard {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .meatSection,
+    .synergyCard {
+        padding: 3rem 2rem;
+        border-radius: 32px;
+    }
+}

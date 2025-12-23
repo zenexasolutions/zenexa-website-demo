@@ -1,150 +1,78 @@
 .section {
-    padding: 100px 0;
-    background: linear-gradient(180deg, var(--bg-light-primary) 0%, var(--bg-light-secondary) 100%);
+    padding: 8rem 0;
+    background: #0f172a;
     position: relative;
     overflow: hidden;
 }
 
-/* Background Subtle Effect */
-.section::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(24, 79, 93, 0.03) 0%, transparent 70%);
-    z-index: 0;
-}
-
 .container {
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 2rem;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .statBox {
-    position: relative;
-    background: var(--bg-card-solid);
-    border: 1px solid var(--border-light);
-    border-radius: 24px;
-    padding: 32px 24px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+}
+
+.numberRow {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    box-shadow: var(--shadow-sm);
-}
-
-.statBox:hover {
-    transform: translateY(-10px);
-    background: var(--bg-card-solid);
-    border-color: rgba(24, 79, 93, 0.2);
-    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
-}
-
-.statBox::after {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: 24px;
-    padding: 1px;
-    background: linear-gradient(180deg, rgba(24, 79, 93, 0.15), transparent);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.statBox:hover::after {
-    opacity: 1;
-}
-
-/* Glowing Orb Behind Number */
-.orb {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 120px;
-    height: 120px;
-    background: radial-gradient(circle, rgba(24, 79, 93, 0.08) 0%, transparent 70%);
-    border-radius: 50%;
-    filter: blur(20px);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.statBox:hover .orb {
-    opacity: 1;
-    animation: pulse 2s infinite;
+    gap: 1.5rem;
 }
 
 .number {
-    font-size: 3.5rem;
+    font-size: clamp(3rem, 6vw, 4.5rem);
     font-weight: 800;
-    color: var(--text-primary);
-    margin-bottom: 8px;
-    background: linear-gradient(135deg, #184f5d 0%, #348978 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    position: relative;
-    z-index: 2;
+    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.indicator {
+    height: 40px;
+    width: 2px;
+    background: var(--color-neon-teal);
+    border-radius: 10px;
 }
 
 .label {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--color-primary-teal);
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    position: relative;
-    z-index: 2;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.01em;
 }
 
 .subtext {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    position: relative;
-    z-index: 2;
+    font-size: 0.95rem;
+    color: #94a3b8;
+    line-height: 1.5;
 }
 
-@keyframes pulse {
-    0% {
-        transform: translate(-50%, -50%) scale(0.95);
-        opacity: 0.5;
-    }
-
-    50% {
-        transform: translate(-50%, -50%) scale(1.1);
-        opacity: 0.8;
-    }
-
-    100% {
-        transform: translate(-50%, -50%) scale(0.95);
-        opacity: 0.5;
-    }
+.backgroundBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--color-neon-teal), transparent);
+    opacity: 0.3;
 }
 
 @media (max-width: 1024px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
     }
 }
 
@@ -153,7 +81,7 @@
         grid-template-columns: 1fr;
     }
 
-    .number {
-        font-size: 3rem;
+    .section {
+        padding: 6rem 0;
     }
 }

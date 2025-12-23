@@ -1,0 +1,197 @@
+.page {
+    background: #ffffff;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero */
+.hero {
+    padding: 12rem 0 6rem;
+    background: radial-gradient(circle at 10% 20%, rgba(20, 184, 166, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(24, 79, 93, 0.05) 0%, transparent 40%);
+}
+
+.heroContent {
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.heroTitle {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    letter-spacing: -0.04em;
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* specialization section */
+.section {
+    padding: 8rem 0;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.sectionHeader h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+/* Cards Grid */
+.specializationGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.specCard {
+    background: #f8fafc;
+    border-radius: 40px;
+    padding: 4rem;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.4s ease;
+}
+
+.specCard:hover {
+    transform: translateY(-10px);
+    background: #ffffff;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.05);
+    border-color: rgba(20, 184, 166, 0.3);
+}
+
+.cardIcon {
+    width: 64px;
+    height: 64px;
+    background: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary-teal);
+    margin-bottom: 2.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+}
+
+.specCard h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.featureList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.featureItem {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.itemBullet {
+    width: 6px;
+    height: 6px;
+    background: var(--color-primary-teal);
+    border-radius: 50%;
+    margin-top: 0.6rem;
+    flex-shrink: 0;
+}
+
+.featureItem p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.featureItem strong {
+    color: var(--text-primary);
+}
+
+/* PBM Defnese Section */
+.pbmSection {
+    background: #0f172a;
+    border-radius: 60px;
+    margin: 4rem auto;
+    padding: 8rem 0;
+    color: #ffffff;
+    overflow: hidden;
+    position: relative;
+}
+
+.pbmGrid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.pbmTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.pbmText {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.visualSide {
+    position: relative;
+    z-index: 2;
+}
+
+.mockupContainer {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+}
+
+.gradientBlob {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, transparent 70%);
+    filter: blur(80px);
+}
+
+@media (max-width: 1024px) {
+
+    .specializationGrid,
+    .pbmGrid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .pbmSection {
+        border-radius: 0;
+        padding: 6rem 2rem;
+    }
+}

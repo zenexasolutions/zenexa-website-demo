@@ -1,69 +1,68 @@
 import React from 'react';
 import styles from './Compliance.module.css';
-import { Section } from '@/components/ui/Section';
-import { Button } from '@/components/ui/Button';
-import { Shield, Lock, Award, Check, FileCheck } from 'lucide-react';
+import { Shield, Eye, TrendingUp, Lock, BarChart, Search } from 'lucide-react';
+
+const values = [
+    {
+        icon: <Shield size={40} />,
+        title: "Uncompromised Compliance",
+        description: "In a time when cybersecurity is a \"revenue emergency,\" we see data security as a matter of clinical safety. Our infrastructure is like a fortress.",
+        features: ["Military-grade Encryption", "HIPAA/SOC2 Audited", "Real-time Monitoring"]
+    },
+    {
+        icon: <Eye size={40} />,
+        title: "Radical Transparency",
+        description: "No fees that aren't clear and no processes that are hard to understand. Our real-time dashboards show you everything about the status of your revenue cycle.",
+        features: ["Real-time Dashboards", "Clear Financials", "Weekly Performance Reviews"]
+    },
+    {
+        icon: <TrendingUp size={40} />,
+        title: "Relentless Optimization",
+        description: "The status quo is a resource that is losing value. We constantly improve our workflows to stay ahead of changes in payer policies and rules.",
+        features: ["Predictive Analytics", "Workflow Automation", "Payer Policy Intelligence"]
+    }
+];
 
 export const Compliance = () => {
     return (
-        <Section className={styles.section}>
-            <div className={styles.shieldBg} />
-
-            <div className={styles.header}>
-                <h2 className={styles.headline}>Enterprise-Grade Security</h2>
-                <p className={styles.subheadline}>We protect your data with military-grade security and 100% regulatory compliance</p>
-            </div>
-
-            <div className={styles.grid}>
-                {/* Card 1 */}
-                <div className={styles.card}>
-                    <div className={styles.iconContainer}>
-                        <Lock size={32} />
-                    </div>
-                    <h3 className={styles.title}>Data Security</h3>
-                    <ul className={styles.list}>
-                        <li className={styles.item}><Check size={16} className={styles.checkIcon} /> End-to-end encryption (AES-256)</li>
-                        <li className={styles.item}><Check size={16} className={styles.checkIcon} /> Multi-factor authentication</li>
-                        <li className={styles.item}><Check size={16} className={styles.checkIcon} /> Role-based access controls</li>
-                        <li className={styles.item}><Check size={16} className={styles.checkIcon} /> Regular security audits</li>
-                        <li className={styles.item}><Check size={16} className={styles.checkIcon} /> SOC II Type II certified</li>
-                    </ul>
+        <section className={styles.section}>
+            <div className={styles.container}>
+                <div className={styles.header}>
+                    <span className={styles.badge}>Our Philosophy</span>
+                    <h2 className={styles.headline}>The Rules We Follow</h2>
+                    <p className={styles.subheadline}>
+                        The operating system of trust for the US healthcare economy.
+                    </p>
                 </div>
 
-                {/* Card 2 */}
-                <div className={styles.card}>
-                    <div className={styles.iconContainer}>
-                        <Shield size={32} />
-                    </div>
-                    <h3 className={styles.title}>HIPAA & Regulatory</h3>
-                    <ul className={styles.list}>
-                        <li className={styles.item}><Check size={16} className={styles.checkIcon} /> 100% HIPAA & HITECH compliant</li>
-                        <li className={styles.item}><Check size={16} className={styles.checkIcon} /> Business Associate Agreements</li>
-                        <li className={styles.item}><Check size={16} className={styles.checkIcon} /> Annual compliance audits</li>
-                        <li className={styles.item}><Check size={16} className={styles.checkIcon} /> Incident response procedures</li>
-                        <li className={styles.item}><Check size={16} className={styles.checkIcon} /> Zero data breaches in 15+ years</li>
-                    </ul>
-                </div>
-
-                {/* Card 3 */}
-                <div className={styles.card}>
-                    <div className={styles.iconContainer}>
-                        <Award size={32} />
-                    </div>
-                    <h3 className={styles.title}>Certifications</h3>
-                    <ul className={styles.list}>
-                        <li className={styles.item}><Check size={16} className={styles.checkIcon} /> ISO 27001 Information Security</li>
-                        <li className={styles.item}><Check size={16} className={styles.checkIcon} /> AAPC & AHIMA certifications</li>
-                        <li className={styles.item}><Check size={16} className={styles.checkIcon} /> NCCPA accreditation</li>
-                        <li className={styles.item}><Check size={16} className={styles.checkIcon} /> Industry-leading quality standards</li>
-                        <li className={styles.item}><Check size={16} className={styles.checkIcon} /> Continuous staff training</li>
-                    </ul>
+                <div className={styles.grid}>
+                    {values.map((val, index) => (
+                        <div key={index} className={styles.card}>
+                            <div className={styles.iconWrapper}>
+                                {val.icon}
+                                <div className={styles.iconGlow}></div>
+                            </div>
+                            <h3 className={styles.cardTitle}>{val.title}</h3>
+                            <p className={styles.cardText}>
+                                {val.description}
+                            </p>
+                            <div className={styles.features}>
+                                {val.features.map((f, i) => (
+                                    <div key={i} className={styles.featureItem}>
+                                        <div className={styles.bullet}></div>
+                                        <span>{f}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className={styles.cardDecorative}></div>
+                        </div>
+                    ))}
                 </div>
             </div>
 
-            <div className={styles.ctaWrapper}>
-                <Button leftIcon={<FileCheck size={18} />}>View Compliance Documentation</Button>
+            <div className={styles.bgDecoration}>
+                <div className={styles.gradientSphere}></div>
             </div>
-        </Section>
+        </section>
     );
 };

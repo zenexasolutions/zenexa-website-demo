@@ -1,47 +1,157 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './AboutContent.module.css';
-import { Section } from '@/components/ui/Section';
+import { Rocket, History, Shield, Eye, Award, Users, Lock } from 'lucide-react';
 
 export const AboutContent = () => {
     return (
-        <Section>
-            <div className={styles.grid}>
-                <div className={styles.imageWrapper}>
-                    <img
-                        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=2032"
-                        alt="Zenexa Team"
-                        className={styles.image}
-                    />
-                </div>
+        <div className={styles.aboutContainer}>
+            {/* Mission & Vision Section */}
+            <section className={styles.missionVision}>
                 <div className={styles.content}>
-                    <h2 className={styles.title}>Our Mission & Vision</h2>
-                    <p className={styles.text}>
-                        Founded in 2010, Zenexa has grown from a small medical coding firm to a global healthcare BPO leader. Our mission is to empower healthcare organizations to focus on patient care by handling the complexities of revenue cycle management.
-                    </p>
-                    <p className={styles.text}>
-                        We believe in a partnership approach, acting as an extension of your team rather than just a vendor. With operations in India and support teams in the USA, we offer the perfect blend of cost-efficiency, expertise, and 24/7 availability.
-                    </p>
+                    <div className={styles.missionGrid}>
+                        <div className={styles.missionText}>
+                            <h2 className={styles.sectionTitle}>Engineering the Future of Care</h2>
+                            <p className={styles.text}>
+                                At Zenexa Infotech, we think that administrative problems are the hidden enemy of patient care.
+                                Every dollar lost to a technical denial and every hour a nurse spends looking for a medical record
+                                is a resource that could have been used for healing. We are here to get those resources back.
+                            </p>
 
-                    <div className={styles.stats}>
-                        <div className={styles.statItem}>
-                            <span className={styles.statNumber}>15+</span>
-                            <span className={styles.statLabel}>Years Experience</span>
+                            <div className={styles.missionBox}>
+                                <h3>Our Mission</h3>
+                                <p>
+                                    To give healthcare organizations safe, scalable, and smart solutions that produce measurable
+                                    financial results while making sure they follow all the rules.
+                                </p>
+                            </div>
                         </div>
-                        <div className={styles.statItem}>
-                            <span className={styles.statNumber}>500+</span>
-                            <span className={styles.statLabel}>Team Members</span>
+
+                        <div className={styles.missionImageWrapper}>
+                            <Image
+                                src="/images/about-mission.png"
+                                alt="Healthcare team collaborating on patient care"
+                                fill
+                                className={styles.missionImage}
+                            />
                         </div>
-                        <div className={styles.statItem}>
-                            <span className={styles.statNumber}>200+</span>
-                            <span className={styles.statLabel}>Happy Clients</span>
+                    </div>
+
+                    <div className={styles.visionBox}>
+                        <Rocket size={40} className={styles.visionIcon} />
+                        <h3>Our Vision</h3>
+                        <p>
+                            To be the operating system of trust for the US healthcare economy—a future where providers,
+                            payers, and partners work together using technology-driven workflows that make administrative
+                            waste unnecessary.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Our Story Section */}
+            <section className={styles.storySection}>
+                <div className={styles.storyHeader}>
+                    <History size={18} />
+                    <span>OUR STORY</span>
+                </div>
+                <h2 className={styles.sectionTitle}>From Frustration in the Industry to Leader in Innovation</h2>
+
+                <div className={styles.storyContent}>
+                    <div className={styles.timeline}>
+                        <div className={styles.timelineItem}>
+                            <div className={styles.timelineDot}></div>
+                            <div className={styles.timelineContent}>
+                                <h4>The Catalyst (2025)</h4>
+                                <p>
+                                    Zenexa was started in 2025 by healthcare revenue cycle professionals who had seen
+                                    the same painful pattern over and over again: great clinical teams losing money that
+                                    could have been avoided, worrying about compliance, and having to deal with
+                                    administrative tasks that took their attention away from patient care.
+                                </p>
+                            </div>
                         </div>
-                        <div className={styles.statItem}>
-                            <span className={styles.statNumber}>24/7</span>
-                            <span className={styles.statLabel}>Global Support</span>
+
+                        <div className={styles.timelineItem}>
+                            <div className={styles.timelineDot}></div>
+                            <div className={styles.timelineContent}>
+                                <h4>The Difference</h4>
+                                <p>
+                                    Zenexa was made to be different. From the start, our model put results ahead of activity.
+                                    We spent money on specialized talent—AAPC and AHIMA certified coders who are experts in
+                                    their fields, not just regular billing clerks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className={styles.timelineItem}>
+                            <div className={styles.timelineDot}></div>
+                            <div className={styles.timelineContent}>
+                                <h4>Today</h4>
+                                <p>
+                                    What began as a 15-person business helping 8 physician groups has grown into a global
+                                    RCM powerhouse. Zenexa works with more than 200 healthcare organizations in 42 states,
+                                    processing more than $4.2 billion in claims each year with the best performance metrics
+                                    in the industry.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </Section>
+            </section>
+
+            {/* Values Section */}
+            <section className={styles.valuesSection}>
+                <h2 className={styles.sectionTitle}>The Rules That Help Us Make Every Choice</h2>
+                <p className={styles.valuesIntro}>Our fundamental beliefs and code of conduct.</p>
+
+                <div className={styles.valuesGrid}>
+                    <div className={styles.valueCard}>
+                        <Shield size={32} className={styles.valueIcon} />
+                        <h4>1. Integrity Without Compromise</h4>
+                        <p>
+                            We never suggest upcoding, questionable documentation practices, or aggressive billing
+                            strategies that could get you in trouble with an audit.
+                        </p>
+                    </div>
+
+                    <div className={styles.valueCard}>
+                        <Award size={32} className={styles.valueIcon} />
+                        <h4>2. Relentless Excellence</h4>
+                        <p>
+                            We don&apos;t use the phrase &quot;good enough.&quot; When industry standards say 12% denials,
+                            we aim for 4%. No room for mediocrity.
+                        </p>
+                    </div>
+
+                    <div className={styles.valueCard}>
+                        <Eye size={32} className={styles.valueIcon} />
+                        <h4>3. Radical Openness</h4>
+                        <p>
+                            No hiding behind vague numbers. You see everything about your revenue cycle performance
+                            in real-time, even when we make mistakes.
+                        </p>
+                    </div>
+
+                    <div className={styles.valueCard}>
+                        <Users size={32} className={styles.valueIcon} />
+                        <h4>4. Real Partnership</h4>
+                        <p>
+                            We only do well when you do well. This isn&apos;t transactional outsourcing; it&apos;s a
+                            strategic partnership where your financial health is our main goal.
+                        </p>
+                    </div>
+
+                    <div className={styles.valueCard}>
+                        <Lock size={32} className={styles.valueIcon} />
+                        <h4>5. Safety First</h4>
+                        <p>
+                            A single data breach can ruin a healthcare organization&apos;s reputation and financial
+                            stability. We follow military-grade security rules.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
     );
 };

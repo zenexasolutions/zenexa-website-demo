@@ -17,17 +17,17 @@ export const Hero = () => {
                 <div className={styles.content}>
                     <div className={styles.badgeContainer}>
                         <Zap size={16} color="#0d9488" />
-                        <span className={styles.badgeText}>Next-Gen Revenue Cycle Management</span>
+                        <span className={styles.badgeText}>Powering the Pulse of Modern Healthcare</span>
                     </div>
 
                     <h1 className={styles.headline}>
-                        The Future of <br />
-                        <span className={styles.highlight}>Revenue Operations</span>
+                        Revenue Resilience for the <br />
+                        <span className={styles.highlight}>Modern Healthcare Enterprise</span>
                     </h1>
 
                     <p className={styles.subheadline}>
-                        Zenexa transforms your healthcare revenue cycle into a high-performance engine.
-                        Reduce denials by 50% and accelerate cash flow with our AI-enhanced BPO solutions.
+                        Where Compliance Meets Performance. Zenexa transforms your healthcare revenue cycle
+                        into a high-performance engine with AI-enhanced solutions backed by certified HIM professionals.
                     </p>
 
                     <div className={styles.actions}>
