@@ -3,11 +3,12 @@ import styles from './Button.module.css';
 import { Loader2 } from 'lucide-react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    variant?: 'primary' | 'secondary' | 'ghost';
+    variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
     size?: 'sm' | 'md' | 'lg';
     isLoading?: boolean;
     leftIcon?: React.ReactNode;
     rightIcon?: React.ReactNode;
+    fullWidth?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -19,14 +20,16 @@ export const Button: React.FC<ButtonProps> = ({
     rightIcon,
     className,
     disabled,
+    fullWidth = false,
     ...props
 }) => {
     const variantClass = styles[variant];
     const sizeClass = styles[size];
+    const fullWidthClass = fullWidth ? styles.fullWidth : '';
 
     return (
         <button
-            className={`${styles.button} ${variantClass} ${sizeClass} ${className || ''}`}
+            className={`${styles.button} ${variantClass} ${sizeClass} ${fullWidthClass} ${className || ''}`}
             disabled={disabled || isLoading}
             {...props}
         >

@@ -47,6 +47,18 @@
     transform: translateY(-2px);
 }
 
+/* Outline Variant */
+.outline {
+    background: transparent;
+    border: 2px solid var(--color-primary-teal);
+    color: var(--color-primary-teal);
+}
+
+.outline:hover {
+    background: rgba(24, 79, 93, 0.05);
+    transform: translateY(-2px);
+}
+
 /* Ghost Variant */
 .ghost {
     background: transparent;
@@ -69,6 +81,11 @@
 .lg {
     padding: 18px 48px;
     font-size: 16px;
+}
+
+.fullWidth {
+    width: 100%;
+    display: flex;
 }
 
 /* Icon spacing */
