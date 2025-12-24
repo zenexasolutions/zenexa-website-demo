@@ -263,3 +263,44 @@
         padding: 2.5rem;
     }
 }
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 8rem 0 4rem;
+    }
+
+    .heroActions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+
+    .sectionHeader {
+        margin-bottom: 3rem;
+    }
+
+    .specCard {
+        padding: 2rem;
+        border-radius: 32px;
+    }
+
+    .pbmSection {
+        padding: 4rem 1.5rem;
+        border-radius: 32px;
+    }
+
+    .pbmTitle {
+        font-size: 2.25rem;
+    }
+
+    .pbmText {
+        font-size: 1.1rem;
+    }
+
+    .mockupContainer {
+        border-radius: 24px;
+    }
+}

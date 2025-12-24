@@ -222,6 +222,7 @@
     margin-bottom: 4rem;
     background: var(--gradient-text);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -323,5 +324,49 @@
 
     .imageContainer {
         height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 8rem 0 4rem;
+    }
+
+    .heroActions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+
+    .tableSection {
+        padding: 3rem 1.5rem;
+        border-radius: 32px;
+    }
+
+    .tableTitle {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .comparisonTable td {
+        padding: 1.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .footerCard {
+        padding: 4rem 1.5rem;
+        border-radius: 32px;
+    }
+
+    .footerCard h3 {
+        font-size: 2.5rem;
+    }
+
+    .footerCard p {
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
     }
 }

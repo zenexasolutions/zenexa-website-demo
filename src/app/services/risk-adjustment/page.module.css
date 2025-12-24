@@ -314,6 +314,57 @@
     }
 }
 
+@media (max-width: 768px) {
+    .hero {
+        padding: 8rem 0 4rem;
+    }
+
+    .heroActions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+
+    .modelGrid {
+        gap: 3rem;
+    }
+
+    .infoCard {
+        padding: 1.5rem;
+        border-radius: 24px;
+    }
+
+    .meatSection {
+        padding: 3rem 1.5rem;
+        border-radius: 32px;
+    }
+
+    .meatTitle {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .meatSubtitle {
+        margin-bottom: 3rem;
+    }
+
+    .meatCard {
+        padding: 2rem 1.5rem;
+    }
+
+    .performanceCard {
+        padding: 2rem;
+        border-radius: 24px;
+    }
+
+    .synergyCard {
+        gap: 3rem;
+    }
+}
+
 @media (max-width: 640px) {
     .meatGrid {
         grid-template-columns: 1fr;
