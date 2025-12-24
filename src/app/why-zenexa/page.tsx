@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageHero } from '@/components/ui/PageHero';
 import { WhyZenexaContent } from '@/components/why-zenexa/WhyZenexaContent';
-import { Stats } from '@/components/home/Stats';
+
 import { Testimonials } from '@/components/home/Testimonials';
 import { CTA } from '@/components/home/CTA';
 
@@ -19,7 +19,7 @@ export default function WhyZenexaPage() {
                 tagline="Why Choose Us"
             />
             <WhyZenexaContent />
-            <Stats />
+
             <Testimonials />
             <CTA />
         </>

@@ -1,19 +1,11 @@
+'use client';
+
 import React from 'react';
 import styles from './ResourceList.module.css';
 import { Section } from '@/components/ui/Section';
-import { ArrowRight, BookOpen, FileText, Newspaper, BarChart3 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { resources, Resource, getCategoryColor, getCategoryIcon } from '@/data/resourcesData';
-
-const CategoryIcon = ({ category }: { category: Resource['category'] }) => {
-    const props = { size: 14 };
-    switch (category) {
-        case 'Guide': return <BookOpen {...props} />;
-        case 'Whitepaper': return <FileText {...props} />;
-        case 'Article': return <Newspaper {...props} />;
-        case 'Case Study': return <BarChart3 {...props} />;
-    }
-};
+import { resources, getCategoryColor, getCategoryIcon } from '@/data/resourcesData';
 
 export const ResourceList = () => {
     const [activeCategory, setActiveCategory] = React.useState<string>('All');

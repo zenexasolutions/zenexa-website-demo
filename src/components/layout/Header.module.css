@@ -18,7 +18,7 @@
     background: transparent !important;
 }
 
-/* ===== GLASSMORPHIC PILL - Light Mode ===== */
+/* ===== GLASSMORPHIC PILL - Dark Mode ===== */
 .container {
     display: flex;
     align-items: center;
@@ -29,15 +29,16 @@
     padding: 8px 12px 8px 24px;
     pointer-events: auto;
 
-    /* Light Mode Glassmorphism */
-    background: rgba(255, 255, 255, 0.85);
+    /* PREMIUM DARK GLASSMORPHISM */
+    background: rgba(15, 23, 42, 0.6);
+    /* Slate 900 */
     backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
-    border: 1px solid rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 100px;
     box-shadow:
-        0 4px 24px -1px rgba(15, 23, 42, 0.08),
-        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+        0 4px 24px -1px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
 
     transition: all 500ms cubic-bezier(0.16, 1, 0.3, 1);
     margin: 0 16px;
@@ -52,11 +53,12 @@
 
 .scrolled .container {
     height: 60px;
-    background: rgba(255, 255, 255, 0.95);
-    border-color: rgba(15, 23, 42, 0.1);
+    background: rgba(15, 23, 42, 0.85);
+    border-color: rgba(45, 212, 191, 0.2);
+    /* Teal hint border on scroll */
     box-shadow:
-        0 8px 32px -4px rgba(15, 23, 42, 0.1),
-        0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+        0 8px 32px -4px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
     max-width: 1100px;
 }
 
@@ -68,6 +70,8 @@
     height: 40px;
     min-width: 140px;
     z-index: 10;
+    /* Ensure svg logo, if used, is white inversion or handled by Next/Image */
+    filter: brightness(0) invert(1);
 }
 
 /* ===== NAVIGATION ===== */
@@ -93,7 +97,8 @@
 .link {
     font-size: 14px;
     font-weight: 500;
-    color: rgba(15, 23, 42, 0.7);
+    color: rgba(255, 255, 255, 0.8);
+    /* White text */
     padding: 8px 18px;
     border-radius: 100px;
     transition: all 300ms ease;
@@ -104,8 +109,9 @@
 }
 
 .link:hover {
-    color: var(--color-primary-teal);
-    background: rgba(24, 79, 93, 0.08);
+    color: #2dd4bf;
+    /* Teal 400 */
+    background: rgba(45, 212, 191, 0.1);
 }
 
 @media (max-width: 1200px) {
@@ -131,15 +137,15 @@
 .contactLink {
     font-size: 14px;
     font-weight: 500;
-    color: rgba(15, 23, 42, 0.7);
+    color: rgba(255, 255, 255, 0.8);
     transition: all 250ms ease;
     padding: 8px 16px;
     border-radius: 100px;
 }
 
 .contactLink:hover {
-    color: var(--color-primary-teal);
-    background: rgba(24, 79, 93, 0.05);
+    color: #2dd4bf;
+    background: rgba(45, 212, 191, 0.1);
 }
 
 .ctaButton {
@@ -148,13 +154,16 @@
     height: 44px !important;
     font-weight: 600 !important;
     font-size: 14px !important;
+    color: white !important;
+    background: linear-gradient(135deg, #0d9488, #2dd4bf) !important;
     transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1) !important;
-    box-shadow: 0 4px 12px rgba(24, 79, 93, 0.25) !important;
+    box-shadow: 0 4px 12px rgba(45, 212, 191, 0.25) !important;
+    border: none !important;
 }
 
 .ctaButton:hover {
     transform: translateY(-1px) !important;
-    box-shadow: 0 6px 16px rgba(24, 79, 93, 0.35) !important;
+    box-shadow: 0 6px 16px rgba(45, 212, 191, 0.35) !important;
 }
 
 .scrolled .ctaButton {
@@ -169,37 +178,37 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: rgba(24, 79, 93, 0.08);
-    border: 1px solid rgba(24, 79, 93, 0.15);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     cursor: pointer;
-    color: var(--color-primary-teal);
+    color: #2dd4bf;
     transition: all 250ms ease;
 }
 
 .mobileMenuBtn:hover {
-    background: rgba(24, 79, 93, 0.12);
+    background: rgba(45, 212, 191, 0.2);
     transform: rotate(90deg);
 }
 
-/* ===== MOBILE MENU - Light Mode ===== */
+/* ===== MOBILE MENU - Dark Mode ===== */
 .mobileMenu {
     position: fixed;
     top: 100px;
     left: 24px;
     right: 24px;
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     padding: 24px;
     border-radius: 24px;
-    border: 1px solid rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transform: translateY(-20px);
     opacity: 0;
     pointer-events: none;
     transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 999;
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 .mobileMenuOpen {
@@ -217,7 +226,7 @@
 .mobileLink {
     font-size: 16px;
     font-weight: 500;
-    color: rgba(15, 23, 42, 0.7);
+    color: rgba(255, 255, 255, 0.9);
     padding: 14px 20px;
     border-radius: 16px;
     transition: all 250ms ease;
@@ -227,8 +236,8 @@
 }
 
 .mobileLink:hover {
-    color: var(--color-primary-teal);
-    background: rgba(24, 79, 93, 0.08);
+    color: #2dd4bf;
+    background: rgba(255, 255, 255, 0.05);
     padding-left: 24px;
 }
 

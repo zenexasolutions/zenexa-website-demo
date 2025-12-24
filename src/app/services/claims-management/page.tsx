@@ -53,7 +53,7 @@ export default function ClaimsManagement() {
 
                             <div className="relative h-[600px] rounded-[40px] overflow-hidden">
                                 <Image
-                                    src="/images/service-claims.png"
+                                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
                                     alt="Claims Intelligence Dashboard"
                                     fill
                                     style={{ objectFit: 'cover' }}

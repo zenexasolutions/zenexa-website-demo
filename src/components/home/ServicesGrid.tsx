@@ -10,7 +10,7 @@ const services = [
         subtitle: "Retrieval at the Speed of Decision",
         description: "Zenexa Infotech's \"Smart-Chase\" method changes the way retrieval works, cutting turnaround times by as much as 40%.",
         link: "/services/provider-outreach",
-        accent: "#14b8a6",
+        accent: "#2dd4bf", // Teal 400
         features: ["Direct EHR Integration", "Predictive Outreach Algorithms", "Clinical QA Layer"]
     },
     {
@@ -19,7 +19,7 @@ const services = [
         subtitle: "Defending Pharmacy Margins",
         description: "Specialized solutions for LTC and Home Infusion. Zenexa Infotech provides a fortress around your revenue.",
         link: "/services/pharmacy-billing",
-        accent: "#0891b2",
+        accent: "#22d3ee", // Cyan 400
         features: ["DIR Fee Mitigation", "Inventory Cash Flow", "LTC Specialization"]
     },
     {
@@ -28,7 +28,7 @@ const services = [
         subtitle: "Accurate Coding for the V28 Era",
         description: "Zenexa Infotech helps you deal with the change to the CMS-HCC Version 28 model with clinical accuracy.",
         link: "/services/risk-adjustment",
-        accent: "#184f5d",
+        accent: "#38bdf8", // Sky 400
         features: ["V28 Specificity", "MEAT Validation", "HEDIS Integration"]
     },
     {
@@ -37,7 +37,7 @@ const services = [
         subtitle: "Zero-Defect Revenue Cycle",
         description: "Autonomous technology and expert auditing to raise your Clean Claim Rate (CCR) to over 98% and stop revenue loss.",
         link: "/services/claims-management",
-        accent: "#348978",
+        accent: "#4ade80", // Green 400
         features: ["Denial Prevention", "98%+ CCR", "Front-End Intelligence"]
     }
 ];

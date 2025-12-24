@@ -64,7 +64,7 @@ export default function RiskAdjustment() {
                             <div className={styles.imageWrapper}>
                                 <div className={styles.imageContainer}>
                                     <Image
-                                        src="/images/service-risk-adjustment.png"
+                                        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
                                         alt="Risk Adjustment Analysis"
                                         fill
                                         style={{ objectFit: 'cover' }}

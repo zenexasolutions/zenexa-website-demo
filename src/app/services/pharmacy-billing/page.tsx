@@ -108,7 +108,7 @@ export default function PharmacyBilling() {
                             <div className={styles.visualSide}>
                                 <div className={styles.mockupContainer}>
                                     <Image
-                                        src="/images/pharmacy_billing_mockup.png"
+                                        src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3"
                                         alt="Pharmacy Revenue Hub Mockup"
                                         width={1000}
                                         height={1000}

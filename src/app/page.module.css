@@ -1,20 +1,9 @@
 .page {
-  --background: #ffffff;
-  --foreground: #ffffff;
-
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-
-  --button-primary-hover: #1e3a8a;
-  --button-secondary-hover: #f1f5f9;
-  --button-secondary-border: #e2e8f0;
-
   display: flex;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
   font-family: var(--font-geist-sans);
-  background-color: var(--background);
 }
 
 .main {
@@ -25,7 +14,6 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  background-color: var(--foreground);
   padding: 120px 60px;
 }
 

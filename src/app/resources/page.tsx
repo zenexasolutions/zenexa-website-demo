@@ -1,14 +1,12 @@
 import React from 'react';
-import { PageHero } from '@/components/ui/PageHero';
 import { ResourceList } from '@/components/resources/ResourceList';
 import { CTA } from '@/components/home/CTA';
+import styles from './page.module.css';
 
 export const metadata = {
     title: 'Resources & Blog | Zenexa',
     description: 'Insights, guides, and news about healthcare revenue cycle management.',
 };
-
-import styles from './page.module.css';
 
 export default function ResourcesPage() {
     return (

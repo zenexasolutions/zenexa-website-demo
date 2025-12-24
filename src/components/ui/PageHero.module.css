@@ -1,11 +1,12 @@
 .hero {
-    background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%);
-    color: var(--text-primary);
+    background: radial-gradient(circle at top center, #0f172a 0%, #020617 100%);
+    /* Premium Dark Gradient */
+    color: white;
     padding: 140px 0 60px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    border-bottom: 1px solid var(--border-light);
+    /* Border removed to blend with next section */
 }
 
 @media (max-width: 768px) {
@@ -14,7 +15,7 @@
     }
 }
 
-/* Subtle Grid Background */
+/* Subtle Grid Background - Dark Mode */
 .hero::before {
     content: '';
     position: absolute;
@@ -23,8 +24,8 @@
     right: 0;
     bottom: 0;
     background-image:
-        linear-gradient(rgba(24, 79, 93, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(24, 79, 93, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
     pointer-events: none;
@@ -39,21 +40,22 @@
 }
 
 .headline {
-    font-size: clamp(2.2rem, 8vw, 3.5rem);
+    font-size: clamp(2.5rem, 8vw, 4rem);
     font-weight: 800;
     margin-bottom: 24px;
-    letter-spacing: -1px;
-    background: linear-gradient(180deg, #0f172a 0%, #334155 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    letter-spacing: -0.02em;
+    color: white;
+    /* Direct white for contrast */
     animation: fadeUp 0.8s forwards;
     line-height: 1.1;
+    text-shadow: 0 0 40px rgba(45, 212, 191, 0.2);
+    /* Subtle teal glow */
 }
 
 .subheadline {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    color: var(--text-secondary);
+    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+    color: #94a3b8;
+    /* Slate 400 */
     margin-bottom: 32px;
     line-height: 1.6;
     animation: fadeUp 0.8s forwards 0.2s;
@@ -66,17 +68,19 @@
 .tagline {
     font-size: 14px;
     font-weight: 700;
-    color: var(--color-primary-teal);
+    color: #2dd4bf;
+    /* Teal 400 */
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 20px;
     display: inline-block;
-    padding: 6px 16px;
-    background: rgba(24, 79, 93, 0.08);
-    border-radius: 20px;
-    border: 1px solid rgba(24, 79, 93, 0.15);
+    padding: 8px 16px;
+    background: rgba(45, 212, 191, 0.1);
+    border-radius: 100px;
+    border: 1px solid rgba(45, 212, 191, 0.2);
     animation: fadeUp 0.8s forwards 0.4s;
     opacity: 0;
+    box-shadow: 0 0 20px rgba(45, 212, 191, 0.1);
 }
 
 @keyframes fadeUp {

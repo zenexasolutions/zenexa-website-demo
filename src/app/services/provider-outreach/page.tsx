@@ -71,7 +71,7 @@ export default function ProviderOutreach() {
                             <div className={styles.imageWrapper}>
                                 <div className={styles.imageContainer}>
                                     <Image
-                                        src="/images/provider_outreach_mockup.png"
+                                        src="https://images.unsplash.com/photo-1576091160550-2187d80aeffd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
                                         alt="Zenexa Smart Retrieval Dashboard"
                                         fill
                                         style={{ objectFit: 'cover' }}

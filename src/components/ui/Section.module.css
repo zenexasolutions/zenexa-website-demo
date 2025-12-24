@@ -2,21 +2,23 @@
     padding: 100px 0;
     position: relative;
     overflow: hidden;
-    background: var(--bg-light-primary);
+    background: transparent;
+    /* Let parent or specific component handle bg */
+    color: var(--text-primary);
 }
 
 .section.dark {
-    background: var(--bg-light-secondary);
+    background: #0f172a;
 }
 
 .section.light {
-    background: var(--bg-light-primary);
-    border-top: 1px solid var(--border-light);
-    border-bottom: 1px solid var(--border-light);
+    background: #ffffff;
+    color: #0f172a;
 }
 
 .section.white {
-    background: var(--bg-light-primary);
+    background: #ffffff;
+    color: #0f172a;
 }
 
 .container {

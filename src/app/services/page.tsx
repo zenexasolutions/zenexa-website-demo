@@ -1,8 +1,6 @@
 import React from 'react';
 import { PageHero } from '@/components/ui/PageHero';
 import { ServicesGrid } from '@/components/home/ServicesGrid';
-import { WhyOutsource } from '@/components/services/WhyOutsource';
-import { CTA } from '@/components/home/CTA';
 
 export const metadata = {
     title: 'Services | Zenexa',
@@ -18,8 +16,6 @@ export default function ServicesPage() {
                 tagline="Trusted by 200+ US healthcare organizations"
             />
             <ServicesGrid hideHeader={true} />
-            <WhyOutsource />
-            <CTA />
         </>
     );
 }
