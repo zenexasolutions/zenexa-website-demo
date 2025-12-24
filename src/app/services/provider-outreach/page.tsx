@@ -22,7 +22,7 @@ export default function ProviderOutreach() {
                             Information delays are decision delays. Zenexa Infotech&apos;s &quot;Smart-Chase&quot; method
                             transforms retrieval, cutting turnaround times by as much as 40%.
                         </p>
-                        <div className="mt-10 flex gap-4">
+                        <div className={styles.heroActions}>
                             <Button size="lg" rightIcon={<ArrowRight size={20} />}>Schedule Strategy Session</Button>
                             <Button variant="outline" size="lg">Review Success Stories</Button>
                         </div>
@@ -89,7 +89,7 @@ export default function ProviderOutreach() {
                 <div className={styles.container}>
                     <div className={styles.tableSection}>
                         <h2 className={styles.tableTitle}>The Zenexa Standard</h2>
-                        <div className="overflow-x-auto">
+                        <div className={styles.tableWrapper}>
                             <table className={styles.comparisonTable}>
                                 <thead>
                                     <tr>
@@ -126,7 +126,9 @@ export default function ProviderOutreach() {
                 <div className={styles.container}>
                     <div className={styles.footerCard}>
                         <div className={styles.footerDecor}></div>
-                        <Shield size={64} className="mx-auto text-teal-400 mb-8" />
+                        <div className={styles.footerIcon}>
+                            <Shield size={64} />
+                        </div>
                         <h3>Legal-Grade Retrieval</h3>
                         <p>
                             Navigating state custodianship laws and HIPAA &quot;Right of Access&quot; requires legal expertise.

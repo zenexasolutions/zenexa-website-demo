@@ -23,7 +23,7 @@ export default function RiskAdjustment() {
                             Zenexa Infotech provides the clinical depth needed to navigate this transition with
                             uncompromised accuracy.
                         </p>
-                        <div className="mt-10 flex gap-4">
+                        <div className={styles.heroActions}>
                             <Button size="lg" rightIcon={<ArrowRight size={20} />}>Analyze Your Risk Scores</Button>
                         </div>
                     </div>
@@ -42,12 +42,12 @@ export default function RiskAdjustment() {
                                 clinical indicators that drive accuracy in both models.
                             </p>
 
-                            <div className="space-y-6">
+                            <div className={styles.infoCards}>
                                 <div className={`${styles.infoCard} ${styles.teal}`}>
                                     <div className={styles.iconBox}><Shield size={24} /></div>
                                     <div className={styles.cardText}>
                                         <h4>V28 Model Focus</h4>
-                                        <p>Intensive focus on heart-disease interactions and sever malnutrition specificity required by the new model.</p>
+                                        <p>Intensive focus on heart-disease interactions and severe malnutrition specificity required by the new model.</p>
                                     </div>
                                 </div>
                                 <div className={`${styles.infoCard} ${styles.slate}`}>
@@ -86,23 +86,23 @@ export default function RiskAdjustment() {
                         <div className={styles.meatGrid}>
                             <div className={styles.meatCard}>
                                 <span className={styles.letter}>M</span>
-                                <h4 className="font-bold text-xl mb-2">Monitor</h4>
-                                <p className="text-slate-500">Signs, symptoms, and disease progression.</p>
+                                <h4>Monitor</h4>
+                                <p>Signs, symptoms, and disease progression.</p>
                             </div>
                             <div className={styles.meatCard}>
                                 <span className={styles.letter}>E</span>
-                                <h4 className="font-bold text-xl mb-2">Evaluate</h4>
-                                <p className="text-slate-500">Test results and treatment response review.</p>
+                                <h4>Evaluate</h4>
+                                <p>Test results and treatment response review.</p>
                             </div>
                             <div className={styles.meatCard}>
                                 <span className={styles.letter}>A</span>
-                                <h4 className="font-bold text-xl mb-2">Assess</h4>
-                                <p className="text-slate-500">Physical exam and medical record audit.</p>
+                                <h4>Assess</h4>
+                                <p>Physical exam and medical record audit.</p>
                             </div>
                             <div className={styles.meatCard}>
                                 <span className={styles.letter}>T</span>
-                                <h4 className="font-bold text-xl mb-2">Treat</h4>
-                                <p className="text-slate-500">Medications and active management plans.</p>
+                                <h4>Treat</h4>
+                                <p>Medications and active management plans.</p>
                             </div>
                         </div>
                     </div>
@@ -113,35 +113,35 @@ export default function RiskAdjustment() {
             <section className={styles.section}>
                 <div className={styles.container}>
                     <div className={styles.synergyCard}>
-                        <div>
-                            <h2 className="text-4xl font-extrabold mb-6">HEDIS & Quality Synergy</h2>
-                            <p className="text-xl text-slate-400 mb-8 leading-relaxed">
+                        <div className={styles.synergyContent}>
+                            <h2 className={styles.sectionTitle}>HEDIS & Quality Synergy</h2>
+                            <p className={styles.description}>
                                 Our &quot;One Chart, Two Benefits&quot; workflow captures HEDIS data points during
                                 risk adjustment reviews, protecting your RAF scores while simultaneously
                                 elevating your Star Ratings.
                             </p>
-                            <ul className="space-y-4">
-                                <li className="flex items-center gap-3 text-teal-400">
+                            <ul className={styles.synergyList}>
+                                <li>
                                     <CheckCircle2 size={20} />
                                     <span>Gaps-in-Care Identification</span>
                                 </li>
-                                <li className="flex items-center gap-3 text-teal-400">
+                                <li>
                                     <CheckCircle2 size={20} />
                                     <span>Star Rating Optimization</span>
                                 </li>
-                                <li className="flex items-center gap-3 text-teal-400">
+                                <li>
                                     <CheckCircle2 size={20} />
                                     <span>Clinical Abstraction Efficiency</span>
                                 </li>
                             </ul>
                         </div>
-                        <div className="p-10 bg-white/5 rounded-[40px] border border-white/10 backdrop-blur-md">
-                            <div className="flex justify-between items-center mb-8">
-                                <BarChart2 size={32} className="text-teal-400" />
-                                <span className="bg-teal-500/20 text-teal-400 px-4 py-1 rounded-full text-xs font-bold uppercase">Performance</span>
+                        <div className={styles.performanceCard}>
+                            <div className={styles.cardHeader}>
+                                <BarChart2 size={32} className={styles.accentIcon} />
+                                <span className={styles.performanceBadge}>Performance</span>
                             </div>
-                            <h3 className="text-2xl font-bold mb-4">Forensic Chart Review</h3>
-                            <p className="text-slate-400 mb-8">Our teams identify historical conditions that lack current documentation, triggering proactive provider engagement.</p>
+                            <h3 className={styles.cardTitle}>Forensic Chart Review</h3>
+                            <p className={styles.cardText}>Our teams identify historical conditions that lack current documentation, triggering proactive provider engagement.</p>
                             <Button variant="secondary" fullWidth>Request Case Study</Button>
                         </div>
                     </div>

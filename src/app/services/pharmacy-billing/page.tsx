@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
-import { Pill, Shield, TrendingUp, BarChart3, Activity, Clock, CheckCircle2 } from 'lucide-react';
+import { Pill, Shield, TrendingUp, BarChart3, Activity, Clock, CheckCircle2, ArrowRight } from 'lucide-react';
 import styles from './page.module.css';
 
 export const metadata = {
@@ -20,8 +20,8 @@ export default function PharmacyBilling() {
                         <p className={styles.heroSubtitle}>
                             The pharmacy business model is under siege. From the &quot;DIR Hangover&quot; to retroactive clawbacks, profitability requires vigilance. Zenexa provides a fortress around your revenue.
                         </p>
-                        <div className="mt-10">
-                            <Button size="lg">Secure Your Revenue Today</Button>
+                        <div className={styles.heroActions}>
+                            <Button size="lg" rightIcon={<ArrowRight size={20} />}>Secure Your Revenue Today</Button>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ export default function PharmacyBilling() {
                 <div className={styles.container}>
                     <div className={styles.sectionHeader}>
                         <h2>Specialized for LTC & Home Infusion</h2>
-                        <p className="text-xl text-slate-500 max-w-2xl mx-auto">Expert systems for the complex details that generic billers miss.</p>
+                        <p>Expert systems for the complex details that generic billers miss.</p>
                     </div>
 
                     <div className={styles.specializationGrid}>
@@ -82,27 +82,29 @@ export default function PharmacyBilling() {
                                 <p className={styles.pbmText}>
                                     Pharmacy Benefit Managers (PBMs) use complicated algorithms to explain why they don&apos;t pay enough. We use data to fight back.
                                 </p>
-                                <div className="space-y-6">
-                                    <div className="flex gap-4 items-center">
-                                        <div className="w-12 h-12 rounded-full bg-teal-500/20 flex items-center justify-center text-teal-400">
+                                <div className={styles.defenseList}>
+                                    <div className={styles.defenseItem}>
+                                        <div className={styles.iconWrapper}>
                                             <TrendingUp size={24} />
                                         </div>
-                                        <div>
-                                            <h4 className="font-bold text-white">DIR Fee Mitigation</h4>
-                                            <p className="text-slate-400">Real-time adjudication rates to find &quot;underwater&quot; claims immediately.</p>
+                                        <div className={styles.defenseText}>
+                                            <h4>DIR Fee Mitigation</h4>
+                                            <p>Real-time adjudication rates to find &quot;underwater&quot; claims immediately.</p>
                                         </div>
                                     </div>
-                                    <div className="flex gap-4 items-center">
-                                        <div className="w-12 h-12 rounded-full bg-teal-500/20 flex items-center justify-center text-teal-400">
+                                    <div className={styles.defenseItem}>
+                                        <div className={styles.iconWrapper}>
                                             <Clock size={24} />
                                         </div>
-                                        <div>
-                                            <h4 className="font-bold text-white">Inventory Cash Flow</h4>
-                                            <p className="text-slate-400">Free up working capital by speeding up the reimbursement lifecycle.</p>
+                                        <div className={styles.defenseText}>
+                                            <h4>Inventory Cash Flow</h4>
+                                            <p>Free up working capital by speeding up the reimbursement lifecycle.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <Button className="mt-12 neon-glow-teal">View Detailed Defense Strategy</Button>
+                                <div className={styles.pbmActions}>
+                                    <Button size="lg" variant="primary">View Detailed Defense Strategy</Button>
+                                </div>
                             </div>
 
                             <div className={styles.visualSide}>

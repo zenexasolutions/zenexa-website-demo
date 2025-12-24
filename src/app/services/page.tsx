@@ -1,6 +1,8 @@
 import React from 'react';
 import { PageHero } from '@/components/ui/PageHero';
 import { ServicesGrid } from '@/components/home/ServicesGrid';
+import { SpecializedServices } from '@/components/services/SpecializedServices';
+import { CTA } from '@/components/home/CTA';
 
 export const metadata = {
     title: 'Services | Zenexa',
@@ -9,13 +11,15 @@ export const metadata = {
 
 export default function ServicesPage() {
     return (
-        <>
+        <main>
             <PageHero
                 headline="Comprehensive Healthcare BPO Solutions"
-                subheadline="Expert services across the entire revenue cycle, from patient pre-registration to final payment posting"
+                subheadline="Expert services across the entire revenue cycle, from patient pre-registration to final payment posting. Precision-driven, result-oriented."
                 tagline="Trusted by 200+ US healthcare organizations"
             />
             <ServicesGrid hideHeader={true} />
-        </>
+            <SpecializedServices />
+            <CTA />
+        </main>
     );
 }

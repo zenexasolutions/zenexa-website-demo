@@ -1,33 +1,29 @@
 .page {
-    background: #ffffff;
+    background: var(--color-background);
+    color: var(--text-primary);
+    min-height: 100vh;
 }
 
-.container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-/* Hero */
+/* Hero Section */
 .hero {
-    padding: 12rem 0 8rem;
+    padding: 10rem 0 6rem;
     position: relative;
     overflow: hidden;
-    background: radial-gradient(circle at 80% 20%, rgba(20, 184, 166, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 10% 80%, rgba(24, 79, 93, 0.05) 0%, transparent 40%);
+    background: var(--gradient-hero);
 }
 
 .heroContent {
-    max-width: 1000px;
+    max-width: 850px;
+    position: relative;
+    z-index: 1;
 }
 
 .heroTitle {
     font-size: clamp(3rem, 6vw, 4.5rem);
     font-weight: 800;
     line-height: 1.1;
-    color: var(--text-primary);
     margin-bottom: 2rem;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
 }
 
 .heroSubtitle {
@@ -35,15 +31,24 @@
     color: var(--text-secondary);
     line-height: 1.6;
     max-width: 700px;
+    margin-bottom: 3rem;
 }
 
-/* Prevention System */
+.heroActions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Prevention Section */
 .preventionSection {
-    padding: 10rem 0;
-    background: #0f172a;
-    color: #ffffff;
-    border-radius: 64px;
-    margin: 4rem 0;
+    padding: 8rem 0;
+    position: relative;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
 }
 
 .preventionGrid {
@@ -54,60 +59,95 @@
 }
 
 .preventionTitle {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
     font-weight: 800;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .preventionText {
-    font-size: 1.25rem;
-    color: #94a3b8;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
     margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+.intelligenceCards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .intelligenceCard {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 32px;
+    background: var(--color-surface);
     padding: 2.5rem;
-    backdrop-filter: blur(10px);
+    border-radius: 32px;
+    border: 1px solid var(--border-glass);
+    transition: all 0.3s ease;
+}
+
+.intelligenceCard:hover {
+    transform: translateX(10px);
+    border-color: var(--border-accent);
+    box-shadow: var(--shadow-lg);
 }
 
 .intelligenceCard h4 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--color-neon-teal);
+    margin-bottom: 0.75rem;
+    color: var(--color-primary-teal);
 }
 
-/* Specialty Cards */
+.intelligenceCard p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Specialty Section */
+.section {
+    padding: 8rem 0;
+    background: var(--color-surface);
+}
+
 .specialtyGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
-    padding: 6rem 0;
 }
 
 .specialtyCard {
-    background: #f8fafc;
+    background: var(--color-background);
+    padding: 4rem 3rem;
     border-radius: 40px;
-    padding: 3rem;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-glass);
     transition: all 0.4s ease;
+    text-align: center;
 }
 
 .specialtyCard:hover {
-    transform: translateY(-12px);
-    background: #ffffff;
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.06);
-    border-color: rgba(20, 184, 166, 0.3);
+    transform: translateY(-10px);
+    border-color: var(--border-accent);
+    box-shadow: var(--shadow-2xl);
+}
+
+.iconBox {
+    width: 64px;
+    height: 64px;
+    background: rgba(45, 212, 191, 0.1);
+    color: var(--color-primary-teal);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    border: 1px solid var(--border-accent);
 }
 
 .specialtyCard h3 {
     font-size: 1.5rem;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary);
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .specialtyCard p {
@@ -116,23 +156,70 @@
     line-height: 1.6;
 }
 
-.iconBox {
-    width: 60px;
-    height: 60px;
-    background: #ffffff;
-    border-radius: 18px;
+/* Metrics CTA */
+.metricsCTA {
+    background: linear-gradient(135deg, #0d9488 0%, #020617 100%);
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ctaWrapper {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    color: var(--color-primary-teal);
-    margin-bottom: 2rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.ctaContent {
+    max-width: 700px;
+}
+
+.ctaTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.ctaText {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.imageContainer {
+    position: relative;
+    height: 600px;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: var(--shadow-2xl);
+    border: 1px solid var(--border-glass);
 }
 
 @media (max-width: 1024px) {
 
     .preventionGrid,
+    .ctaWrapper {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ctaWrapper {
+        gap: 3rem;
+    }
+
     .specialtyGrid {
         grid-template-columns: 1fr;
+    }
+
+    .heroActions {
+        justify-content: center;
+    }
+
+    .intelligenceCard:hover {
+        transform: translateY(-5px);
     }
 }

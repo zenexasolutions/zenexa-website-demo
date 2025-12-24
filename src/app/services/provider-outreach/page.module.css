@@ -1,5 +1,6 @@
 .page {
-    background: #fcfdfe;
+    background: var(--color-background);
+    color: var(--text-primary);
     min-height: 100vh;
 }
 
@@ -8,13 +9,24 @@
     padding: 10rem 0 6rem;
     position: relative;
     overflow: hidden;
-    background: radial-gradient(circle at 70% 20%, rgba(20, 184, 166, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 10% 80%, rgba(24, 79, 93, 0.03) 0%, transparent 50%);
+    background: var(--gradient-hero);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(45, 212, 191, 0.1) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: 0;
 }
 
 .heroBadge {
     display: inline-block;
-    background: rgba(20, 184, 166, 0.1);
+    background: rgba(45, 212, 191, 0.1);
     color: var(--color-primary-teal);
     padding: 0.6rem 1.2rem;
     border-radius: 100px;
@@ -23,10 +35,12 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 2rem;
-    border: 1px solid rgba(20, 184, 166, 0.2);
+    border: 1px solid var(--border-accent);
 }
 
 .heroContent {
+    position: relative;
+    z-index: 1;
     max-width: 800px;
 }
 
@@ -43,24 +57,30 @@
     font-size: 1.25rem;
     color: var(--text-secondary);
     line-height: 1.6;
-    max-width: 600px;
+    max-width: 650px;
+    margin-bottom: 2.5rem;
+}
+
+.heroActions {
+    display: flex;
+    gap: 1.5rem;
 }
 
 /* Section Styling */
 .section {
-    padding: 6rem 0;
+    padding: 8rem 0;
 }
 
 .container {
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 var(--container-padding);
 }
 
 /* Solution Grid */
 .solutionGrid {
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 6rem;
     align-items: center;
 }
@@ -68,11 +88,11 @@
 .textSide {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .sectionTitle {
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
     font-weight: 800;
     color: var(--text-primary);
     letter-spacing: -0.02em;
@@ -80,8 +100,8 @@
 }
 
 .description {
-    font-size: 1.15rem;
-    line-height: 1.7;
+    font-size: 1.2rem;
+    line-height: 1.8;
     color: var(--text-secondary);
 }
 
@@ -92,45 +112,63 @@
 }
 
 .featureItem {
-    background: #ffffff;
-    padding: 1.5rem;
+    background: var(--color-surface);
+    padding: 2rem;
     border-radius: 24px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-glass);
     display: flex;
-    gap: 1.25rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    gap: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.featureItem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent, rgba(45, 212, 191, 0.03));
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .featureItem:hover {
-    transform: translateX(10px);
-    border-color: rgba(20, 184, 166, 0.3);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px) scale(1.02);
+    border-color: var(--border-accent);
+    box-shadow: var(--shadow-xl), var(--glow-primary);
+}
+
+.featureItem:hover::before {
+    opacity: 1;
 }
 
 .featureIcon {
-    width: 48px;
-    height: 48px;
-    background: #f0fdfa;
-    border-radius: 12px;
+    width: 56px;
+    height: 56px;
+    background: rgba(45, 212, 191, 0.1);
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-primary-teal);
     flex-shrink: 0;
+    border: 1px solid var(--border-accent);
 }
 
 .featureText h3 {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .featureText p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--text-secondary);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .visualSide {
@@ -139,57 +177,79 @@
 
 .imageWrapper {
     position: relative;
-    border-radius: 40px;
+    border-radius: 48px;
     overflow: hidden;
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.08);
-    background: #ffffff;
-    padding: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: var(--color-surface);
+    padding: 1.5rem;
+    border: 1px solid var(--border-glass);
+    box-shadow: var(--shadow-2xl);
 }
 
 .imageContainer {
     position: relative;
-    height: 500px;
-    border-radius: 30px;
+    height: 600px;
+    border-radius: 36px;
     overflow: hidden;
 }
 
 /* Comparison Table Section */
 .tableSection {
-    background: #ffffff;
+    background: var(--color-surface);
     border-radius: 48px;
     padding: 6rem;
     margin: 4rem 0;
-    box-shadow: 0 40px 120px rgba(0, 0, 0, 0.03);
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--border-glass);
+    box-shadow: var(--shadow-2xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.tableSection::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.05) 0%, transparent 70%);
+    filter: blur(60px);
 }
 
 .tableTitle {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 800;
     text-align: center;
     margin-bottom: 4rem;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+    width: 100%;
 }
 
 .comparisonTable {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 
 .comparisonTable th {
     text-align: left;
-    padding: 1.5rem;
-    font-size: 0.85rem;
+    padding: 1.5rem 2rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-secondary);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-glass);
 }
 
 .comparisonTable td {
-    padding: 2rem 1.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    font-size: 1.1rem;
+    padding: 2.5rem 2rem;
+    border-bottom: 1px solid var(--border-glass);
+    font-size: 1.2rem;
     color: var(--text-primary);
 }
 
@@ -199,55 +259,69 @@
 }
 
 .industryValue {
-    color: #94a3b8;
+    color: var(--text-muted);
 }
 
 /* Footer Card */
 .footerCard {
-    background: #0f172a;
+    background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
     border-radius: 48px;
-    padding: 6rem;
+    padding: 8rem 4rem;
     text-align: center;
     color: #ffffff;
     position: relative;
     overflow: hidden;
+    border: 1px solid var(--border-glass);
+}
+
+.footerIcon {
+    margin: 0 auto 2.5rem;
+    color: var(--color-primary-teal);
 }
 
 .footerCard h3 {
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 800;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     position: relative;
     z-index: 2;
 }
 
 .footerCard p {
-    font-size: 1.25rem;
-    color: #94a3b8;
-    max-width: 800px;
-    margin: 0 auto 3rem;
+    font-size: 1.35rem;
+    color: var(--text-secondary);
+    max-width: 850px;
+    margin: 0 auto 4rem;
     position: relative;
     z-index: 2;
+    line-height: 1.8;
 }
 
 .footerDecor {
     position: absolute;
     top: -50%;
     right: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
-    filter: blur(60px);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(45, 212, 191, 0.15) 0%, transparent 70%);
+    filter: blur(80px);
 }
 
 @media (max-width: 1024px) {
     .solutionGrid {
         grid-template-columns: 1fr;
-        gap: 4rem;
+        gap: 5rem;
     }
 
-    .tableSection,
+    .tableSection {
+        padding: 4rem 2rem;
+    }
+
     .footerCard {
-        padding: 3rem 2rem;
+        padding: 4rem 2rem;
+    }
+
+    .imageContainer {
+        height: 400px;
     }
 }
