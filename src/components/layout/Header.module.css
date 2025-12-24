@@ -40,6 +40,14 @@
         0 0 0 1px rgba(255, 255, 255, 0.5) inset;
 
     transition: all 500ms cubic-bezier(0.16, 1, 0.3, 1);
+    margin: 0 16px;
+}
+
+@media (max-width: 1280px) {
+    .container {
+        height: 64px;
+        padding: 6px 10px 6px 20px;
+    }
 }
 
 .scrolled .container {
@@ -98,6 +106,13 @@
 .link:hover {
     color: var(--color-primary-teal);
     background: rgba(24, 79, 93, 0.08);
+}
+
+@media (max-width: 1200px) {
+    .link {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
 }
 
 /* Active/Focus state simulation */
@@ -224,6 +239,10 @@
 
 /* ===== RESPONSIVE BREAKPOINTS ===== */
 @media (max-width: 1024px) {
+    .header {
+        top: 12px;
+        padding: 0 16px;
+    }
 
     .nav,
     .actions {
@@ -235,7 +254,40 @@
     }
 
     .container {
-        padding: 8px 16px;
+        height: 60px;
+        padding: 8px 12px 8px 16px;
+        border-radius: 20px;
+        margin: 0;
+    }
+
+    .scrolled .container {
+        max-width: 100%;
+        height: 60px;
+    }
+}
+
+@media (max-width: 640px) {
+    .header {
+        top: 8px;
+        padding: 0 12px;
+    }
+
+    .container {
+        height: 56px;
+        padding: 8px 10px 8px 12px;
+        border-radius: 16px;
+    }
+
+    .logo {
+        min-width: 120px;
+    }
+
+    .mobileMenu {
+        top: 80px;
+        left: 12px;
+        right: 12px;
+        padding: 16px;
+        border-radius: 20px;
     }
 }
 

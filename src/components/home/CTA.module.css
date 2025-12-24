@@ -164,10 +164,18 @@
 }
 
 @media (max-width: 1024px) {
+    .section {
+        padding: 6rem 0;
+    }
+
     .mainBox {
         grid-template-columns: 1fr;
         gap: 4rem;
         text-align: center;
+    }
+
+    .textContent {
+        align-items: center;
     }
 
     .badge,
@@ -186,8 +194,19 @@
     }
 }
 
+@media (max-width: 768px) {
+    .headline {
+        font-size: clamp(2.2rem, 10vw, 3rem);
+    }
+}
+
 @media (max-width: 640px) {
     .formCard {
         padding: 2.5rem 1.5rem;
+        border-radius: 30px;
+    }
+
+    .formTitle {
+        font-size: 1.25rem;
     }
 }

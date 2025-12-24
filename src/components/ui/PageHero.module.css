@@ -1,11 +1,17 @@
 .hero {
     background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%);
     color: var(--text-primary);
-    padding: 120px 0 80px;
+    padding: 140px 0 60px;
     text-align: center;
     position: relative;
     overflow: hidden;
     border-bottom: 1px solid var(--border-light);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 0 40px;
+    }
 }
 
 /* Subtle Grid Background */
@@ -33,7 +39,7 @@
 }
 
 .headline {
-    font-size: 56px;
+    font-size: clamp(2.2rem, 8vw, 3.5rem);
     font-weight: 800;
     margin-bottom: 24px;
     letter-spacing: -1px;
@@ -42,10 +48,11 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: fadeUp 0.8s forwards;
+    line-height: 1.1;
 }
 
 .subheadline {
-    font-size: 20px;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     color: var(--text-secondary);
     margin-bottom: 32px;
     line-height: 1.6;

@@ -233,16 +233,66 @@
 }
 
 @media (max-width: 1024px) {
+    .section {
+        padding: 6rem 0;
+    }
+
     .mainGrid {
         grid-template-columns: 1fr;
         gap: 4rem;
     }
 
     .pillarsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .topContent {
+        margin-bottom: 5rem;
+    }
+
+    .imageScrollWrapper {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pillarsGrid {
         grid-template-columns: 1fr;
     }
 
-    .section {
-        padding: 6rem 0;
+    .headline {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+    }
+
+    .intro {
+        font-size: 1.25rem;
+    }
+
+    .imageScrollWrapper {
+        height: 300px;
+    }
+
+    .floatingTag {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .pillarPlate {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .floatingCard {
+        flex-direction: column;
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+        gap: 0.5rem;
+    }
+
+    .floatingTag {
+        width: fit-content;
     }
 }

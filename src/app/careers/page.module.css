@@ -51,10 +51,27 @@
 }
 
 .sectionTitle {
-    font-size: 32px;
+    font-size: clamp(1.75rem, 5vw, 2rem);
     font-weight: 800;
     color: var(--text-primary);
     margin-bottom: 40px;
     text-align: center;
     letter-spacing: -0.5px;
+}
+
+@media (max-width: 768px) {
+    .jobCard {
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .jobTitle {
+        font-size: 1.25rem;
+    }
+
+    .jobMeta {
+        gap: 12px 20px;
+    }
 }

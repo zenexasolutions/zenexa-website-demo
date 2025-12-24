@@ -172,15 +172,47 @@
 }
 
 @media (max-width: 1024px) {
+    .section {
+        padding: 8rem 0;
+    }
+
     .grid {
-        grid-template-columns: 1fr;
-        max-width: 600px;
-        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .header {
+        margin-bottom: 4rem;
     }
 }
 
 @media (max-width: 768px) {
     .section {
         padding: 6rem 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .headline {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+    }
+
+    .card {
+        padding: 3rem 2rem;
+        gap: 1.5rem;
+    }
+
+    .iconWrapper {
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+    }
+
+    .cardTitle {
+        font-size: 1.5rem;
     }
 }

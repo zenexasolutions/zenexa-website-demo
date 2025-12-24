@@ -32,10 +32,10 @@ const certs = [
 export const Certifications = () => {
     return (
         <section className={styles.section}>
-            <div className="container mx-auto px-6">
-                <div className="text-center mb-16 reveal">
-                    <h2 className="heading-section mb-6">Third-Party Validated. Audited All The Time.</h2>
-                    <p className="text-slate-600 max-w-2xl mx-auto">
+            <div className="container">
+                <div className={styles.header}>
+                    <h2 className={styles.headline}>Third-Party Validated. Audited All The Time.</h2>
+                    <p className={styles.subheadline}>
                         Compliant with HIPAA & HITECH. We maintain the highest standards of compliance.
                         Our infrastructure is a fortress for your data.
                     </p>

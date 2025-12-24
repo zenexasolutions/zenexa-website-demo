@@ -230,6 +230,47 @@
     line-height: 1.5;
 }
 
+@media (max-width: 1024px) {
+    .industryBody {
+        padding: 30px;
+    }
+
+    .problemBox,
+    .solutionBox {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .industriesContainer {
+        padding: 40px 0;
+    }
+
+    .industryHeader {
+        grid-template-columns: 1fr;
+    }
+
+    .headerContent {
+        padding: 30px 24px;
+    }
+
+    .industryTitle {
+        font-size: 1.5rem;
+    }
+
+    .industryBody {
+        padding: 24px;
+    }
+
+    .highlightsList {
+        grid-template-columns: 1fr;
+    }
+
+    .industryBlock:nth-child(even) .industryHeader {
+        direction: ltr;
+    }
+}
+
 /* Alternating backgrounds */
 .industryBlock:nth-child(even) .industryHeader {
     background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
