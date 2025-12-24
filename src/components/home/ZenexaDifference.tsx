@@ -64,45 +64,42 @@ export const ZenexaDifference = () => {
                     </div>
                 </div>
 
-                <div className={styles.pillarsGrid}>
-                    <div className={styles.pillar}>
-                        <div className={styles.pillarPlate}>
-                            <div className={styles.iconContainer}>
-                                <Cpu size={32} />
-                                <div className={styles.iconGlow}></div>
-                            </div>
-                            <h3 className={styles.pillarTitle}>The Technology</h3>
-                            <p className={styles.pillarText}>
-                                AI-powered claim scrubbing, predictive denial modeling, and automated checks of eligibility.
-                            </p>
+                <div className={styles.pillar}>
+                    <div className={styles.pillarPlate}>
+                        <div className={styles.iconContainer}>
+                            <Cpu size={32} />
+                            <div className={styles.iconGlow}></div>
                         </div>
+                        <h3 className={styles.pillarTitle}>The Technology</h3>
+                        <p className={styles.pillarText}>
+                            AI-powered claim scrubbing, predictive denial modeling, and automated checks of eligibility.
+                        </p>
                     </div>
+                </div>
 
-                    <div className={styles.pillar}>
-                        <div className={styles.pillarPlate}>
-                            <div className={styles.iconContainer}>
-                                <Users size={32} />
-                                <div className={styles.iconGlow}></div>
-                            </div>
-                            <h3 className={styles.pillarTitle}>The Team</h3>
-                            <p className={styles.pillarText}>
-                                AAPC-certified coders, CDI specialists led by an RN, and experts in getting legal-grade records.
-                            </p>
+                <div className={styles.pillar}>
+                    <div className={styles.pillarPlate}>
+                        <div className={styles.iconContainer}>
+                            <Users size={32} />
+                            <div className={styles.iconGlow}></div>
                         </div>
+                        <h3 className={styles.pillarTitle}>The Team</h3>
+                        <p className={styles.pillarText}>
+                            AAPC-certified coders, CDI specialists led by an RN, and experts in getting legal-grade records.
+                        </p>
                     </div>
+                </div>
 
-                    <div className={styles.pillar}>
-                        <div className={styles.pillarPlate}>
-                            <div className={styles.iconContainer}>
-                                <Heart size={32} />
-                                <div className={styles.iconGlow}></div>
-                            </div>
-                            <h3 className={styles.pillarTitle}>The Culture</h3>
-                            <p className={styles.pillarText}>
-                                We&apos;re not an offshore office; we&apos;re part of your main office. Our &quot;One Team&quot; philosophy
-                                means that your KPIs are our survival metrics.
-                            </p>
+                <div className={styles.pillar}>
+                    <div className={styles.pillarPlate}>
+                        <div className={styles.iconContainer}>
+                            <Heart size={32} />
+                            <div className={styles.iconGlow}></div>
                         </div>
+                        <h3 className={styles.pillarTitle}>The Culture</h3>
+                        <p className={styles.pillarText}>
+                            We&apos;re not an offshore office; we&apos;re part of your main office. Our &quot;One Team&quot; philosophy means that your KPIs are the same as our survival metrics.
+                        </p>
                     </div>
                 </div>
             </div>

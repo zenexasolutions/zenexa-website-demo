@@ -2,7 +2,6 @@ import React from 'react';
 import { PageHero } from '@/components/ui/PageHero';
 import { AboutContent } from '@/components/about/AboutContent';
 import { Certifications } from '@/components/about/Certifications';
-import { Stats } from '@/components/home/Stats';
 import { CTA } from '@/components/home/CTA';
 
 export const metadata = {
@@ -20,7 +19,6 @@ export default function AboutPage() {
             />
             <AboutContent />
             <Certifications />
-            <Stats />
             <CTA />
         </>
     );

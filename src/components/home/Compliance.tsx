@@ -12,7 +12,7 @@ const values = [
     {
         icon: <Eye size={40} />,
         title: "Radical Transparency",
-        description: "No fees that aren't clear and no processes that are hard to understand. Our real-time dashboards show you everything about the status of your revenue cycle.",
+        description: "No fees that aren't clear and no processes that are hard to understand. Our real-time dashboards show you everything you need to know about the status of your revenue cycle.",
         features: ["Real-time Dashboards", "Clear Financials", "Weekly Performance Reviews"]
     },
     {

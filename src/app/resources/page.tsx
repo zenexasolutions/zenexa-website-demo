@@ -8,16 +8,32 @@ export const metadata = {
     description: 'Insights, guides, and news about healthcare revenue cycle management.',
 };
 
+import styles from './page.module.css';
+
 export default function ResourcesPage() {
     return (
         <>
-            <PageHero
-                headline="Resources & Insights"
-                subheadline="Stay updated with the latest trends, guides, and news in healthcare RCM."
-                tagline="Knowledge Hub"
-            />
+            <section className={styles.hero}>
+                <div className={styles.gridPattern} />
+                <div className={styles.heroGlow} />
+                <div className={`${styles.decorativeCircle} ${styles.circle1}`} />
+                <div className={`${styles.decorativeCircle} ${styles.circle2}`} />
+
+                <div className={styles.heroContent}>
+                    <span className={styles.tagline}>Knowledge Hub</span>
+                    <h1 className={styles.headline}>Resources & Insights</h1>
+                    <p className={styles.subheadline}>
+                        Stay ahead with expert guides, whitepapers, and the latest trends
+                        in healthcare revenue cycle management.
+                    </p>
+                </div>
+            </section>
+
             <ResourceList />
-            <CTA />
+
+            <div className={styles.newsletterSection}>
+                <CTA />
+            </div>
         </>
     );
 }

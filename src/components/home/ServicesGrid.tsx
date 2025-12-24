@@ -8,16 +8,16 @@ const services = [
         icon: <FileSearch size={32} />,
         title: "Provider Outreach & Medical Record Retrieval",
         subtitle: "Retrieval at the Speed of Decision",
-        description: "Smart-Chase technology cuts turnaround times by 40%. Direct EHR integration with Epic, Cerner, and Athena.",
+        description: "Zenexa Infotech's \"Smart-Chase\" method changes the way retrieval works, cutting turnaround times by as much as 40%.",
         link: "/services/provider-outreach",
         accent: "#14b8a6",
-        features: ["Direct EHR Integration", "Predictive Algorithms", "Clinical QA Layer"]
+        features: ["Direct EHR Integration", "Predictive Outreach Algorithms", "Clinical QA Layer"]
     },
     {
         icon: <Pill size={32} />,
         title: "Pharmacy Billing & Revenue Cycle",
         subtitle: "Defending Pharmacy Margins",
-        description: "Specialized solutions for LTC and Home Infusion. We provide a fortress around your revenue in a volatile landscape.",
+        description: "Specialized solutions for LTC and Home Infusion. Zenexa Infotech provides a fortress around your revenue.",
         link: "/services/pharmacy-billing",
         accent: "#0891b2",
         features: ["DIR Fee Mitigation", "Inventory Cash Flow", "LTC Specialization"]
@@ -26,16 +26,16 @@ const services = [
         icon: <Target size={32} />,
         title: "Chart Abstraction & Risk Adjustment (HCC)",
         subtitle: "Accurate Coding for the V28 Era",
-        description: "High-acuity patient capture with clinical accuracy. Risk scores that stand up to RADV audits.",
+        description: "Zenexa Infotech helps you deal with the change to the CMS-HCC Version 28 model with clinical accuracy.",
         link: "/services/risk-adjustment",
         accent: "#184f5d",
-        features: ["V28 Model Fluency", "MEAT Validation", "HEDIS Integration"]
+        features: ["V28 Specificity", "MEAT Validation", "HEDIS Integration"]
     },
     {
         icon: <FileText size={32} />,
         title: "Claims Management & Coding Support",
         subtitle: "Zero-Defect Revenue Cycle",
-        description: "Autonomous technology and expert auditing to raise Clean Claim Rates to 98%+. Stop revenue loss at the source.",
+        description: "Autonomous technology and expert auditing to raise your Clean Claim Rate (CCR) to over 98% and stop revenue loss.",
         link: "/services/claims-management",
         accent: "#348978",
         features: ["Denial Prevention", "98%+ CCR", "Front-End Intelligence"]

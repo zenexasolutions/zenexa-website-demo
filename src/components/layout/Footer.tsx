@@ -22,8 +22,8 @@ export const Footer = () => {
                             />
                         </Link>
                         <p className={styles.tagline}>
-                            Global Healthcare BPO Solutions<br />
-                            Maximizing revenue with expert RCM services.
+                            Revenue Resilience for the Modern Healthcare Enterprise.<br />
+                            Intelligence with a Human in the Loop.
                         </p>
                         <div className={styles.social}>
                             <a href="#" className={styles.socialIcon} aria-label="LinkedIn"><Linkedin size={24} /></a>
