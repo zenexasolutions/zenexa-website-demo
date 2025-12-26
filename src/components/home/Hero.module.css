@@ -126,7 +126,7 @@
 .subheadline {
     font-size: 1.25rem;
     line-height: 1.7;
-    color: #94a3b8;
+    color: var(--text-secondary);
     /* Slate 400 */
     margin-bottom: 48px;
     max-width: 600px;
@@ -159,11 +159,11 @@
 .glowButtonContent {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     padding: 16px 40px;
     background: #0f172a;
     border-radius: 100px;
-    color: white;
+    color: var(--text-secondary);
     font-weight: 700;
     font-size: 1.1rem;
     position: relative;
@@ -298,7 +298,7 @@
 
 .nodeLabel {
     font-size: 11px;
-    color: #94a3b8;
+    color: var(--text-secondary);
     text-transform: uppercase;
     font-weight: 600;
 }

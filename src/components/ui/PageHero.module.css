@@ -54,8 +54,8 @@
 
 .subheadline {
     font-size: clamp(1.1rem, 2.5vw, 1.25rem);
-    color: #94a3b8;
-    /* Slate 400 */
+    color: var(--text-secondary);
+    /* Improved for contrast */
     margin-bottom: 32px;
     line-height: 1.6;
     animation: fadeUp 0.8s forwards 0.2s;

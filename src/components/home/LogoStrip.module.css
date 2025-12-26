@@ -32,8 +32,8 @@
 .text {
     font-size: 0.85rem;
     font-weight: 700;
-    color: #94a3b8;
-    /* Slate 400 */
+    color: var(--text-secondary);
+    /* Improved for contrast */
     text-transform: uppercase;
     letter-spacing: 0.15em;
     white-space: nowrap;

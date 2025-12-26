@@ -48,7 +48,7 @@
 
 .subheadline {
     font-size: 1.25rem;
-    color: #94a3b8;
+    color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;

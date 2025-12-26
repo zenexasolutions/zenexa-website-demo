@@ -1,75 +1,126 @@
 .section {
-    padding: 8rem 0;
-    background: #f8fafc;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 120px 0;
+    background: var(--color-background);
+    position: relative;
+    overflow: hidden;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.05) 0%, transparent 70%);
+    filter: blur(100px);
+    pointer-events: none;
 }
 
 .header {
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
 }
 
 .headline {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
     font-weight: 800;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary);
+    margin-bottom: 24px;
+    color: white;
+    letter-spacing: -0.02em;
 }
 
 .subheadline {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     color: var(--text-secondary);
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
+    line-height: 1.6;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    gap: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    position: relative;
+    z-index: 1;
 }
 
 .card {
-    padding: 2.5rem;
-    border-radius: var(--radius-lg);
-    background: white;
-    border: 1px solid rgba(24, 79, 93, 0.08);
+    padding: 60px 48px;
+    border-radius: 48px;
+    background: var(--color-surface);
+    border: 1px solid var(--border-glass);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent, rgba(45, 212, 191, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    border-color: var(--border-accent);
+    box-shadow: var(--shadow-2xl), var(--glow-primary);
+}
+
+.card:hover::after {
+    opacity: 1;
 }
 
 .iconWrapper {
-    width: 64px;
-    height: 64px;
-    background: rgba(26, 79, 93, 0.05);
-    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background: rgba(45, 212, 191, 0.1);
+    border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
-    transition: var(--transition-smooth);
+    margin-bottom: 32px;
+    color: var(--color-primary-teal);
+    border: 1px solid var(--border-accent);
+    transition: all 0.5s ease;
 }
 
 .card:hover .iconWrapper {
-    transform: scale(1.1) rotate(5deg);
-    background: rgba(26, 79, 93, 0.1);
+    transform: scale(1.1) rotate(8deg);
+    background: rgba(45, 212, 191, 0.2);
+    box-shadow: 0 0 20px rgba(45, 212, 191, 0.2);
 }
 
 .title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-    font-family: var(--font-outfit), sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: white;
+    letter-spacing: -0.01em;
 }
 
 .description {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    line-height: 1.7;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    margin-bottom: 40px;
 }
 
 .itemList {
@@ -78,32 +129,51 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 16px;
     text-align: left;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .itemList li {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    font-size: 0.9rem;
+    gap: 12px;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--color-primary-teal);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-glass);
 }
 
 @media (max-width: 1024px) {
     .grid {
-        gap: 2rem;
+        gap: 24px;
+    }
+
+    .card {
+        padding: 40px;
     }
 }
 
 @media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
+
     .grid {
         grid-template-columns: 1fr;
     }
 
     .card {
-        padding: 2rem;
+        padding: 40px 24px;
+        border-radius: 32px;
+    }
+
+    .title {
+        font-size: 1.5rem;
     }
 }

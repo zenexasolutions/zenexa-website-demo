@@ -20,10 +20,10 @@
 
   /* Text Colors - Dark Mode */
   --text-primary: #ffffff;
-  --text-secondary: #94a3b8;
-  /* Slate 400 */
-  --text-muted: #64748b;
-  /* Slate 500 */
+  --text-secondary: #cbd5e1;
+  /* Slate 300 - Improved for contrast */
+  --text-muted: #94a3b8;
+  /* Slate 400 - Improved for contrast */
   --text-on-dark: #ffffff;
 
   /* Borders & Shadows */

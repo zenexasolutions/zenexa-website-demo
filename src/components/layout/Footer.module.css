@@ -1,6 +1,6 @@
 .footer {
     background: #0f172a;
-    color: #94a3b8;
+    color: var(--text-secondary);
     padding: 80px 0 32px;
     font-size: 14px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -82,7 +82,7 @@
 }
 
 .link {
-    color: #94a3b8;
+    color: var(--text-secondary);
     text-decoration: none;
     transition: color 0.2s ease;
 }
@@ -128,7 +128,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #94a3b8;
+    color: var(--text-secondary);
 }
 
 .bottomBar {
@@ -137,7 +137,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #64748b;
+    color: var(--text-muted);
     font-size: 13px;
 }
 
