@@ -6,7 +6,7 @@ import { CTA } from '@/components/home/CTA';
 
 export const metadata = {
     title: 'About Us | Zenexa',
-    description: 'Built by Revenue Cycle Experts. Healthcare leaders trust Zenexa.',
+    description: 'Built by Revenue Cycle Experts. Engineering the future of healthcare revenue cycle management.',
 };
 
 export default function AboutPage() {

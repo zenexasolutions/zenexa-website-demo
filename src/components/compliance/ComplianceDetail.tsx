@@ -39,11 +39,11 @@ export const ComplianceDetail = () => {
             <div className={styles.certGrid}>
                 <div className={styles.certItem}>
                     <div className={styles.certLogo}>ISO</div>
-                    <span className={styles.certName}>ISO 27001:2013 Certified</span>
+                    <span className={styles.certName}>ISO 27001 Standards</span>
                 </div>
                 <div className={styles.certItem}>
                     <div className={styles.certLogo}>SOC</div>
-                    <span className={styles.certName}>SOC 2 Type II Audited</span>
+                    <span className={styles.certName}>SOC 2 Framework</span>
                 </div>
                 <div className={styles.certItem}>
                     <div className={styles.certLogo}>GDPR</div>

@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './Stats.module.css';
 
 const stats = [
-    { number: "200+", label: "Healthcare Organizations", subtext: "Trust Zenexa for Revenue Resilience" },
-    { number: "$4.2B", label: "Claims Processed Each Year", subtext: "Best-in-Class Performance Metrics" },
-    { number: "99%+", label: "Coding Accuracy", subtext: "AAPC/AHIMA Certified Standards" },
-    { number: "98%+", label: "Clean Claim Rate", subtext: "Far Exceeding Industry Averages" }
+    { number: "Targeted", label: "Accuracy Rate", subtext: "Aiming for 99%+ Clean Claim Precision" },
+    { number: "Elite", label: "Certified Team", subtext: "AAPC/AHIMA Standards in Every Workflow" },
+    { number: "Modern", label: "Healthcare Tech", subtext: "Agentic AI & Secure Infrastructure" },
+    { number: "Rapid", label: "Growth Vision", subtext: "Building the RCM Powerhouse of Tomorrow" }
 ];
 
 export const Stats = () => {

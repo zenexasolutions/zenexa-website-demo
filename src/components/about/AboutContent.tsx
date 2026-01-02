@@ -87,15 +87,16 @@ export const AboutContent = () => {
                         <div className={styles.timelineItem}>
                             <div className={styles.timelineDot}></div>
                             <div className={styles.timelineContent}>
-                                <h4>Today</h4>
+                                <h4>The Launch (Today)</h4>
                                 <p>
-                                    What began as a 15-person business helping 8 physician groups has grown into a global
-                                    RCM powerhouse. Zenexa works with more than 200 healthcare organizations in 42 states,
-                                    processing more than $4.2 billion in claims each year with the best performance metrics
-                                    in the industry.
+                                    Today, Zenexa is launching with a mission to redefine the industry. Armed with
+                                    AAPC-certified experts and the latest in Agentic AI technology, we are
+                                    building the next generation of healthcare RCM—a future where providers
+                                    can focus entirely on clinical excellence while we handle the rest.
                                 </p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>

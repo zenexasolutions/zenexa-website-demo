@@ -15,7 +15,7 @@ export default function ServicesPage() {
             <PageHero
                 headline="Comprehensive Healthcare BPO Solutions"
                 subheadline="Expert services across the entire revenue cycle, from patient pre-registration to final payment posting. Precision-driven, result-oriented."
-                tagline="Trusted by 200+ US healthcare organizations"
+                tagline="Fusing Elite Human Expertise with Agentic AI"
             />
             <ServicesGrid hideHeader={true} />
             <SpecializedServices />

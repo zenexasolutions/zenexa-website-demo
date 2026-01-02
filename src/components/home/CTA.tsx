@@ -22,7 +22,7 @@ export const CTA = () => {
                         </h2>
                         <p className={styles.subheadline}>
                             Your revenue cycle: A simple look at your revenue. At a large scale. At peace.
-                            Join 200+ organizations moving from chaos to clarity.
+                            Experience a new standard of healthcare RCM intelligence.
                         </p>
 
                         <div className={styles.trustSignals}>

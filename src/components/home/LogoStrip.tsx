@@ -1,16 +1,16 @@
 import React from 'react';
 import styles from './LogoStrip.module.css';
-import { Building2, Activity, HeartPulse, Stethoscope, Cross, Shield, Zap, Globe } from 'lucide-react';
+import { Shield, Activity, CheckCircle2, Building2, HeartPulse, Globe } from 'lucide-react';
 
 const logos = [
-    { icon: <Building2 size={24} />, name: "MEDICARE PLUS" },
-    { icon: <Activity size={24} />, name: "HEALTHFLOW" },
-    { icon: <HeartPulse size={24} />, name: "CARESYSTEMS" },
-    { icon: <Stethoscope size={24} />, name: "DOCGROUP" },
-    { icon: <Cross size={24} />, name: "UNITY HEALTH" },
-    { icon: <Shield size={24} />, name: "SECUREMED" },
-    { icon: <Zap size={24} />, name: "RAPIDCARE" },
-    { icon: <Globe size={24} />, name: "GLOBALHEALTH" },
+    { icon: <Shield size={24} />, name: "HIPAA COMPLIANT" },
+    { icon: <Activity size={24} />, name: "HL7 STANDARDS" },
+    { icon: <CheckCircle2 size={24} />, name: "AAPC CERTIFIED" },
+    { icon: <Building2 size={24} />, name: "CMS ALIGNED" },
+    { icon: <HeartPulse size={24} />, name: "ICD-10 READY" },
+    { icon: <Activity size={24} />, name: "CPT EXPERTISE" },
+    { icon: <Shield size={24} />, name: "SOC2 TARGETED" },
+    { icon: <Globe size={24} />, name: "FHIR COMPLIANT" },
 ];
 
 export const LogoStrip = () => {
@@ -19,7 +19,7 @@ export const LogoStrip = () => {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <div className={styles.line}></div>
-                    <p className={styles.text}>Trusted Expertise Across 200+ Organizations</p>
+                    <p className={styles.text}>Built for Modern Healthcare Standards</p>
                     <div className={styles.line}></div>
                 </div>
 

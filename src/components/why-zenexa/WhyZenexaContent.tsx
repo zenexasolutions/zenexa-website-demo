@@ -12,7 +12,7 @@ export const WhyZenexaContent = () => {
                     <div className={styles.content}>
                         <h2 className={styles.title}>Unmatched Quality & Accuracy</h2>
                         <p className={styles.text}>
-                            Quality isn't just a buzzword for us; it's our core promise. We maintain a 99%+ accuracy rate across all our coding and billing services, significantly higher than the industry average of 95%.
+                            Quality isn't just a buzzword for us; it's our core promise. We target a 99%+ accuracy rate across all our coding and billing services, setting a new benchmark for the industry.
                         </p>
                         <ul className={styles.list}>
                             <li className={styles.item}><CheckCircle2 size={20} className={styles.icon} /> 3-Tier Quality Audit Process</li>
@@ -35,8 +35,8 @@ export const WhyZenexaContent = () => {
                             Your data security is our top priority. We operate in a 100% HIPAA-compliant environment with military-grade encryption and strict physical security measures.
                         </p>
                         <ul className={styles.list}>
-                            <li className={styles.item}><ShieldCheck size={20} className={styles.icon} /> ISO 27001 Certified</li>
-                            <li className={styles.item}><ShieldCheck size={20} className={styles.icon} /> SOC 2 Type II Audited</li>
+                            <li className={styles.item}><ShieldCheck size={20} className={styles.icon} /> ISO 27001 Standards</li>
+                            <li className={styles.item}><ShieldCheck size={20} className={styles.icon} /> SOC 2 Type II Framework</li>
                             <li className={styles.item}><ShieldCheck size={20} className={styles.icon} /> Biometric Access Controls</li>
                         </ul>
                     </div>

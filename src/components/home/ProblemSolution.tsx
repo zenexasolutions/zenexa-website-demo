@@ -41,11 +41,11 @@ export const ProblemSolution = () => {
                     <div className={styles.list}>
                         <div className={styles.item}>
                             <div className={styles.iconWrapper}><CheckCircle2 size={24} /></div>
-                            <p className={styles.text}>Our <strong>99%+ accuracy</strong> eliminates denials and maximizes reimbursements.</p>
+                            <p className={styles.text}><strong>Targeted 99%+ accuracy</strong> to eliminate denials and maximize reimbursements.</p>
                         </div>
                         <div className={styles.item}>
                             <div className={styles.iconWrapper}><TrendingUp size={24} /></div>
-                            <p className={styles.text}>Streamlined RCM reduces Days in A/R to under <strong>30 days</strong>.</p>
+                            <p className={styles.text}>Built to reduce Days in A/R to under <strong>30 days</strong>.</p>
                         </div>
                         <div className={styles.item}>
                             <div className={styles.iconWrapper}><ShieldCheck size={24} /></div>

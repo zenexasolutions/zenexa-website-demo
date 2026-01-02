@@ -64,8 +64,8 @@ export const WhyOutsource = () => {
             <div className={styles.benefitsGrid}>
                 <div className={styles.benefitCard}>
                     <div className={styles.benefitIcon}><Award size={32} /></div>
-                    <h4 className={styles.benefitTitle}>Experience</h4>
-                    <p className={styles.benefitText}>15+ years in healthcare BPO. 200+ satisfied clients. Billions in claims processed.</p>
+                    <h4 className={styles.benefitTitle}>Elite Talent</h4>
+                    <p className={styles.benefitText}>Specialized healthcare professionals. Advanced industry standards. Billions in target claim accuracy.</p>
                 </div>
                 <div className={styles.benefitCard}>
                     <div className={styles.benefitIcon}><Users size={32} /></div>

@@ -30,7 +30,7 @@ export const Hero = () => {
                     {/* Refined Subheadline */}
                     <p className={styles.subheadline}>
                         Zenexa fuses <strong>Agentic AI</strong> with elite <strong>Human Expertise</strong> to eliminate denials and accelerate cash flow.
-                        <br className="hidden md:block" /> Experience the precision of a 99.9% clean claim rate.
+                        <br className="hidden md:block" /> Experience high-precision RCM with our 99.9% clean claim goal.
                     </p>
 
                     {/* Single High-Impact CTA */}
@@ -73,8 +73,8 @@ export const Hero = () => {
                         <div className={`${styles.dataNode} ${styles.node1}`}>
                             <div className={styles.nodeIcon}>🛡️</div>
                             <div className={styles.nodeContent}>
-                                <span className={styles.nodeLabel}>Denial Rate</span>
-                                <span className={styles.nodeValue}>0.02%</span>
+                                <span className={styles.nodeLabel}>Quality Goal</span>
+                                <span className={styles.nodeValue}>99.9%</span>
                             </div>
                         </div>
 
