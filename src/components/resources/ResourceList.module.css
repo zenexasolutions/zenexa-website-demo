@@ -41,8 +41,8 @@
 .filterButton {
     padding: 10px 24px;
     border-radius: 30px;
-    border: 1px solid var(--border-light);
-    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(15, 23, 42, 0.5);
     backdrop-filter: blur(8px);
     color: var(--text-secondary);
     font-size: 14px;
@@ -52,7 +52,7 @@
 }
 
 .filterButton:hover {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(30, 41, 59, 0.8);
     transform: translateY(-2px);
     border-color: var(--color-primary-teal);
     color: var(--color-primary-teal);
@@ -62,7 +62,7 @@
     background: linear-gradient(135deg, var(--color-primary-teal) 0%, var(--color-secondary-teal) 100%);
     border-color: transparent;
     color: white;
-    box-shadow: 0 4px 12px rgba(77, 184, 168, 0.3);
+    box-shadow: 0 8px 16px rgba(45, 212, 191, 0.2);
 }
 
 .filterButtonActive:hover {
@@ -81,23 +81,23 @@
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(15, 23, 42, 0.6);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 24px;
     overflow: hidden;
     transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
     height: 100%;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
     transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-    border-color: rgba(77, 184, 168, 0.3);
-    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(45, 212, 191, 0.4);
+    background: rgba(30, 41, 59, 0.8);
 }
 
 /* Image Area */
@@ -122,13 +122,13 @@
     width: 56px;
     height: 56px;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(15, 23, 42, 0.7);
     backdrop-filter: blur(4px);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     margin-bottom: 12px;
     transition: transform 500ms ease;
 }
@@ -143,7 +143,7 @@
     left: 20px;
     padding: 6px 14px;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(15, 23, 42, 0.8);
     backdrop-filter: blur(8px);
     font-size: 11px;
     font-weight: 700;
@@ -152,8 +152,8 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Content Area */
@@ -166,12 +166,14 @@
 
 .date {
     font-size: 13px;
-    color: var(--text-muted);
+    color: #94a3b8;
+    /* Increased brightness slightly from --text-muted */
     font-weight: 500;
     margin-bottom: 12px;
     display: flex;
     align-items: center;
     gap: 6px;
+    opacity: 0.9;
 }
 
 .title {
@@ -189,7 +191,8 @@
 
 .excerpt {
     font-size: 15px;
-    color: var(--text-secondary);
+    color: #cbd5e1;
+    /* Using a more direct higher-contrast color for dark background */
     line-height: 1.6;
     margin-bottom: 24px;
     flex-grow: 1;
@@ -198,6 +201,7 @@
     line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    opacity: 0.85;
 }
 
 .footer {
@@ -205,7 +209,7 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 20px;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .author {

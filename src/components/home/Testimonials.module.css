@@ -1,7 +1,7 @@
 .section {
     position: relative;
     padding: 120px 0;
-    background: var(--bg-light-primary);
+    background: var(--color-background);
     overflow: hidden;
 }
 
@@ -14,8 +14,8 @@
     right: 0;
     bottom: 0;
     background-image:
-        radial-gradient(circle at 15% 50%, rgba(24, 79, 93, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 85% 30%, rgba(52, 137, 120, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 15% 50%, rgba(45, 212, 191, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(14, 165, 233, 0.05) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -23,7 +23,7 @@
     position: absolute;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(24, 79, 93, 0.04) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(45, 212, 191, 0.05) 0%, transparent 70%);
     border-radius: 50%;
     filter: blur(80px);
     z-index: 0;
@@ -38,7 +38,7 @@
 .glow2 {
     bottom: -20%;
     right: -10%;
-    background: radial-gradient(circle, rgba(52, 137, 120, 0.03) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.04) 0%, transparent 70%);
     animation-delay: -5s;
 }
 
@@ -59,8 +59,8 @@
 .badge {
     display: inline-block;
     padding: 8px 16px;
-    background: linear-gradient(135deg, rgba(24, 79, 93, 0.08) 0%, rgba(52, 137, 120, 0.08) 100%);
-    border: 1px solid rgba(24, 79, 93, 0.15);
+    background: rgba(45, 212, 191, 0.1);
+    border: 1px solid rgba(45, 212, 191, 0.2);
     border-radius: 50px;
     font-size: 14px;
     font-weight: 600;
@@ -75,7 +75,7 @@
     color: var(--text-primary);
     margin-bottom: 24px;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -97,15 +97,16 @@
 
 .card {
     position: relative;
-    background: var(--bg-card-solid);
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
     border-radius: 24px;
     padding: 48px 32px;
-    border: 1px solid var(--border-light);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .card::before {
@@ -117,6 +118,7 @@
     background: linear-gradient(180deg, rgba(24, 79, 93, 0.1), transparent);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     pointer-events: none;
     opacity: 0;
@@ -125,10 +127,11 @@
 
 .card:hover {
     transform: translateY(-10px) scale(1.02);
-    background: var(--bg-card-solid);
+    background: rgba(30, 41, 59, 0.8);
     box-shadow:
-        0 20px 40px rgba(15, 23, 42, 0.08),
-        0 0 0 1px rgba(24, 79, 93, 0.15);
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(45, 212, 191, 0.3);
+    border-color: rgba(45, 212, 191, 0.4);
 }
 
 .card:hover::before {
@@ -138,7 +141,7 @@
 .card:hover .quoteIcon {
     color: var(--color-primary-teal);
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(-5deg);
 }
 
 .quoteIcon {
@@ -176,7 +179,7 @@
     font-weight: 700;
     color: white;
     font-size: 18px;
-    border: 2px solid rgba(15, 23, 42, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .authorInfo {
